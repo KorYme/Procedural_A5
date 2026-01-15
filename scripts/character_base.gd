@@ -2,7 +2,7 @@
 
 signal life_changed(current_life : int)
 
-enum ORIENTATION {FREE, DPAD_8, DPAD_4}
+enum ORIENTATION {FREE, DPAD_8, DPAD_4, DPAD_2}
 enum STATE {IDLE, ATTACKING, STUNNED, DEAD}
 
 @export_group("Life")
@@ -31,6 +31,7 @@ var _last_hit_time : float
 # Movement
 var _direction : Vector2
 var _current_movement : MovementParameters
+var _speed : float = 3.0
 
 # Attack
 var _last_attack_time : float
@@ -60,6 +61,7 @@ func _physics_process(_delta: float) -> void:
 		velocity += _direction * _current_movement.acceleration * get_physics_process_delta_time()
 		velocity = velocity.limit_length(_current_movement.speed_max)
 		main_sprite.rotation = _compute_orientation_angle(_direction)
+		main_sprite.
 	else:
 		## If direction length == 0, Apply friction
 		var friction_length = _current_movement.friction * get_physics_process_delta_time()
@@ -143,6 +145,8 @@ func _compute_orientation_angle(direction : Vector2) -> float:
 			return Utils.DiscreteAngle(angle, 45)
 		ORIENTATION.DPAD_4:
 			return Utils.DiscreteAngle(angle, 90)
+		ORIENTATION.DPAD_2:
+			return direction.x
 	return angle
 
 
