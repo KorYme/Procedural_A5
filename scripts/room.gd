@@ -1,6 +1,5 @@
 class_name Room extends Node2D
 
-@export var is_start_room : bool
 # Position of the room in index coordinates. Coordinates {0,0} are the coordinates of the central room. Room {1,0} is on the right side of room {0,0}.
 @export var room_pos : Vector2i = Vector2i.ZERO
 # Size of the room in index coordinates. By default : {1,1}.
@@ -12,11 +11,11 @@ static var all_rooms : Array[Room]
 var doors : Array[Door]
 
 @onready var _cam : CameraFollow = $/root/MainScene/Camera2D
-
+	
 
 func _ready() -> void:
 	all_rooms.push_back(self)
-	if is_start_room:
+	if all_rooms.size() == 1:
 		Player.Instance.enter_room(self)
 
 
