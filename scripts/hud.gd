@@ -1,10 +1,13 @@
-extends CanvasLayer
+class_name Hud extends CanvasLayer
 
 @export var heart_scene : PackedScene
+@export var label : Label
 
 var previous_life : int
 
 @onready var life_container : BoxContainer = $"LifeContainer"
+
+
 
 
 func _ready() -> void:

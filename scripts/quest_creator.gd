@@ -1,5 +1,6 @@
 class_name QuestCreator extends Node
 
+@export var text : Hud
 
 func LoadJson(path: String) -> Dictionary:
 	var file = FileAccess.open(path, FileAccess.READ)
@@ -19,7 +20,7 @@ func LoadJson(path: String) -> Dictionary:
 		
 	return json.data
 	
-func _ready():
+func CreateDialogue():
 	var data = LoadJson("res://mescouilles.json")
 	var grammar = Tracery.Grammar.new(data)
 	
@@ -29,4 +30,9 @@ func _ready():
 	
 	for i in range (0,5):
 		var sentence = grammar.flatten("#origin#")
+		text.label.text = sentence
 		print(sentence)
+		
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("Dialogue"):
+		CreateDialogue()

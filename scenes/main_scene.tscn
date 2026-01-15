@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://db5cfan2a3vjb"]
+[gd_scene load_steps=10 format=3 uid="uid://db5cfan2a3vjb"]
 
-[ext_resource type="Script" uid="uid://dy8q5lbirwh1y" path="res://scripts/main_scene.gd" id="1_18nlu"]
+[ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_18nlu"]
 [ext_resource type="PackedScene" uid="uid://wx1d3cdd6ci2" path="res://scenes/rooms/room_1.tscn" id="1_fekva"]
 [ext_resource type="PackedScene" uid="uid://bib07te5reau7" path="res://scenes/player.tscn" id="1_qspk8"]
 [ext_resource type="Script" uid="uid://4eq20em80d1w" path="res://scripts/camera_follow.gd" id="2_liovv"]
@@ -26,6 +26,7 @@ position = Vector2(47, -63)
 
 [node name="hud" parent="." instance=ExtResource("7_i43eg")]
 
-[node name="QuestCreator" type="Node" parent="."]
+[node name="QuestCreator" type="Node" parent="." node_paths=PackedStringArray("text")]
 script = ExtResource("8_18nlu")
+text = NodePath("../hud")
 metadata/_custom_type_script = "uid://ctfjr4q8b6iq4"
