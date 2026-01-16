@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dihkeh471x7pv"]
+
+[ext_resource type="Script" uid="uid://b14ld4pjlhyvi" path="res://scripts/pickable_weapon.gd" id="1_24e1e"]
+[ext_resource type="Texture2D" uid="uid://bskt4u81uro4g" path="res://sprites/Tiles/Colored/tile_0070.png" id="2_i4juq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5p5mm"]
+size = Vector2(24, 24)
+
+[node name="WeaponTest" type="Node2D"]
+script = ExtResource("1_24e1e")
+weapon_type = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("2_i4juq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_5p5mm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

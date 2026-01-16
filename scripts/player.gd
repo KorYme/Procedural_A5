@@ -2,12 +2,13 @@ class_name Player extends CharacterBase
 
 static var Instance : Player
 
+enum WEAPON {NONE, SWORD, AXE, MASS, SPEAR}
+
 @export_group("Input")
 @export_range (0.0, 1.0) var controller_dead_zone : float = 0.3
 
 # Collectible
 var key_count : int
-
 
 func _init() -> void:
 	Instance = self
@@ -22,6 +23,7 @@ func _process(delta: float) -> void:
 	_update_inputs()
 	_update_room()
 
+var current_weapon : WEAPON = WEAPON.NONE
 
 func enter_room(room : Room) -> void:
 	var previous = _room
@@ -79,5 +81,11 @@ func _set_state(state : STATE) -> void:
 func _update_state(_delta : float) -> void:
 	match _state:
 		STATE.ATTACKING:
-			_spawn_attack_scene()
+			if current_weapon != WEAPON.NONE:
+				_spawn_attack_scene()
 			_set_state(STATE.IDLE)
+			
+func swap_weapon (weapon_type : WEAPON) -> void:
+	current_weapon = weapon_type
+	# update weapon visual
+	# drop old weapon

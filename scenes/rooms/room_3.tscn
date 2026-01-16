@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://s6ah3dc0wqxd"]
+[gd_scene load_steps=4 format=4 uid="uid://s6ah3dc0wqxd"]
 
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_nujyu"]
 [ext_resource type="TileSet" uid="uid://boei5dbdfnuex" path="res://resources/tilesets/placeholder_tileset.tres" id="2_sr7rr"]
+[ext_resource type="PackedScene" uid="uid://dihkeh471x7pv" path="res://scenes/weapons/pickable_weapon.tscn" id="3_g5ssp"]
 
 [node name="Room3" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_nujyu")
@@ -14,3 +15,6 @@ tile_set = ExtResource("2_sr7rr")
 [node name="Props" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAFAP3/AgAAAAAAAgADAPv/AgAAAAAAAgAHAPv/AgAAAAAAAgAHAPL/AgAAAAAAAgADAPL/AgAAAAAAAgAFAPD/AgAAAAAAAgAFAPT/AgAAAAAAAgAFAPn/AgAAAAAAAgAFAPf/AAAAAAAAAQAJAO//AAAAAAAAAgAFAPv/AgAAAAAAAQAFAPL/AgAAAAAAAQAJAP7/AAAAAAAAAgA=")
 tile_set = ExtResource("2_sr7rr")
+
+[node name="WeaponTest" parent="." instance=ExtResource("3_g5ssp")]
+position = Vector2(109, -178)

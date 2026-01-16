@@ -1,0 +1,36 @@
+{
+  "origin": [
+    "#hello.capitalize# #forgeron#, #besoin# #weapons#"
+  ],
+  "hello": [
+    "hello",
+    "hi",
+    "hola",
+    "bonjour",
+    "Привет",
+    "你好",
+    "👋",
+    "مرحبا"
+  ],
+  "weapons": [
+    "une épée",
+    "une hache",
+    "un arc et des flèches",
+    "un bouclier",
+    "une mace",
+    "un pack d'asset",
+    "une lance"
+  ],
+  "forgeron": [
+    "forgeron",
+    "forgemaster",
+    "Paul Mohand Zidi, Petit Fils de Claude Zidi",
+    "l'OVNI"
+  ],
+  "besoin": [
+    "aled, donne",
+    "je me retrouve en besoin",
+    "eh tia a pas",
+    "j'ai besoin"
+  ]
+}

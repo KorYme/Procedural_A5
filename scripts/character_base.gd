@@ -2,7 +2,7 @@
 
 signal life_changed(current_life : int)
 
-enum ORIENTATION {FREE, DPAD_8, DPAD_4}
+enum ORIENTATION {FREE, DPAD_8, DPAD_4, DPAD_2}
 enum STATE {IDLE, ATTACKING, STUNNED, DEAD}
 
 @export_group("Life")
@@ -30,7 +30,9 @@ var _last_hit_time : float
 
 # Movement
 var _direction : Vector2
+var _last_direction : Vector2
 var _current_movement : MovementParameters
+var _speed: int = 10000
 
 # Attack
 var _last_attack_time : float
@@ -57,9 +59,9 @@ func _physics_process(_delta: float) -> void:
 		_has_to_apply_knockback = false
 
 	if _direction.length() > 0.000001:
-		velocity += _direction * _current_movement.acceleration * get_physics_process_delta_time()
+		velocity = _direction * _speed * get_physics_process_delta_time()
 		velocity = velocity.limit_length(_current_movement.speed_max)
-		main_sprite.rotation = _compute_orientation_angle(_direction)
+		_last_direction = _direction
 	else:
 		## If direction length == 0, Apply friction
 		var friction_length = _current_movement.friction * get_physics_process_delta_time()
@@ -79,6 +81,7 @@ func apply_hit(attack : Attack) -> void:
 	if Time.get_unix_time_from_system() - _last_hit_time < invincibility_duration:
 		return
 	_last_hit_time = Time.get_unix_time_from_system()
+
 
 	life -= attack.damages if attack != null else 1
 	if life <= 0:
@@ -143,6 +146,8 @@ func _compute_orientation_angle(direction : Vector2) -> float:
 			return Utils.DiscreteAngle(angle, 45)
 		ORIENTATION.DPAD_4:
 			return Utils.DiscreteAngle(angle, 90)
+		ORIENTATION.DPAD_2:
+			return direction.x
 	return angle
 
 
@@ -159,12 +164,12 @@ func _spawn_attack_scene() -> void:
 		return
 
 	var spawn_position = attack_spawn_point.global_position if attack_spawn_point != null else global_position
-	var spawn_rotation = attack_spawn_point.global_rotation if attack_spawn_point != null else global_rotation
 	var spawned_attack = attack_scene.instantiate() as Attack
 	get_tree().root.add_child(spawned_attack)
 	spawned_attack.global_position = spawn_position
-	spawned_attack.global_rotation = spawn_rotation
+	spawned_attack.global_rotation = _last_direction.angle()
 	spawned_attack.attack_owner = self
+	
 
 func _can_move() -> bool:
 	return _state == STATE.IDLE
