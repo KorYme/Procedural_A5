@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="RoomData" load_steps=3 format=3 uid="uid://cjib3m1ryf6o5"]
-
-[ext_resource type="Script" uid="uid://bbqi8weov0twl" path="res://scripts/room_data.gd" id="1_l2vrk"]
-[ext_resource type="PackedScene" uid="uid://buuwp4chbvml5" path="res://scenes/rooms/room_2.tscn" id="1_w6lid"]
-
-[resource]
-script = ExtResource("1_l2vrk")
-room_reference = ExtResource("1_w6lid")
-metadata/_custom_type_script = "uid://bbqi8weov0twl"

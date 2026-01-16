@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="AllRoomData" load_steps=11 format=3 uid="uid://cbfmq3iludnjk"]
+
+[ext_resource type="Script" uid="uid://b3pvvx65rfh5g" path="res://scripts/all_rooms_data.gd" id="1_0nul0"]
+[ext_resource type="Script" uid="uid://bbqi8weov0twl" path="res://scripts/room_data.gd" id="1_6ry5b"]
+[ext_resource type="PackedScene" uid="uid://wx1d3cdd6ci2" path="res://scenes/rooms/room_1.tscn" id="2_iprye"]
+[ext_resource type="PackedScene" uid="uid://buuwp4chbvml5" path="res://scenes/rooms/room_2.tscn" id="3_hu4fw"]
+[ext_resource type="PackedScene" uid="uid://s6ah3dc0wqxd" path="res://scenes/rooms/room_3.tscn" id="4_w4mfr"]
+[ext_resource type="PackedScene" uid="uid://d2bd4nrdruls4" path="res://scenes/rooms/room_4.tscn" id="5_qspla"]
+
+[sub_resource type="Resource" id="Resource_hu4fw"]
+script = ExtResource("1_6ry5b")
+room_reference = ExtResource("2_iprye")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_k72vy"]
+script = ExtResource("1_6ry5b")
+room_reference = ExtResource("3_hu4fw")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_w4mfr"]
+script = ExtResource("1_6ry5b")
+room_reference = ExtResource("4_w4mfr")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_qspla"]
+script = ExtResource("1_6ry5b")
+room_reference = ExtResource("5_qspla")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[resource]
+script = ExtResource("1_0nul0")
+Rooms = Array[ExtResource("1_6ry5b")]([SubResource("Resource_hu4fw"), SubResource("Resource_k72vy"), SubResource("Resource_w4mfr"), SubResource("Resource_qspla")])
+metadata/_custom_type_script = "uid://b3pvvx65rfh5g"
