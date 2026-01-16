@@ -32,6 +32,7 @@ var _last_hit_time : float
 var _direction : Vector2
 var _last_direction : Vector2
 var _current_movement : MovementParameters
+var _speed: int = 10000
 
 # Attack
 var _last_attack_time : float
@@ -58,7 +59,7 @@ func _physics_process(_delta: float) -> void:
 		_has_to_apply_knockback = false
 
 	if _direction.length() > 0.000001:
-		velocity += _direction * _current_movement.acceleration * get_physics_process_delta_time()
+		velocity = _direction * _speed * get_physics_process_delta_time()
 		velocity = velocity.limit_length(_current_movement.speed_max)
 		_last_direction = _direction
 	else:
