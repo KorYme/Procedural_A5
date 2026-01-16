@@ -3,6 +3,8 @@ class_name main_scene extends Node2D
 @export var room_data : Array[RoomData]
 
 const room_size : Vector2i = Vector2i( 352, -288 )
+var directions : Array[Vector2i] = [Vector2i( 1, 0 ), Vector2i( -1, 0 ), 
+Vector2i( 0, 1 ), Vector2i( 0, -1 )]
 
 func _ready() -> void:
 	generate_dungeons()
@@ -11,24 +13,44 @@ func _ready() -> void:
 func generate_dungeons(size : int = 5) -> void:
 	# Fill the tab
 	var tab : Array[Array] = []
-	var sub_tab : Array[int] = []
+	var sub_tab : Array[bool] = []
 	for i in range(size):
 		sub_tab.append(false)
 	for i in range(size):
 		tab.append(sub_tab.duplicate(true))
-		
-	var room_number : int = size * size * 0.8
-	for i in range(room_number):
-		
-		pass
-		
+
+	var room_number : int = size * size * 0.5
+	var coordinates : Array[Vector2i] = [Vector2i(size / 2, 0)]
+	tab[0][size / 2] = true
 	
+	for i in range(room_number - 1):
+		coordinates.shuffle()
+		var index : int = coordinates.find_custom(
+			func(value): 
+			return (
+			(value.y + 1 < size and !tab[value.y + 1][value.x]) or
+			(value.y - 1 >= 0 and !tab[value.y - 1][value.x]) or
+			(value.x + 1 < size and !tab[value.y][value.x + 1]) or 
+			(value.x - 1 >= 0 and !tab[value.y][value.x - 1])
+			))
+		var pos : Vector2i = coordinates[index]
+		
+		directions.shuffle()
+		for dir in directions:
+			if (dir.x + pos.x >= 0 and dir.x + pos.x < size 
+			and dir.y + pos.y >= 0 and dir.y + pos.y < size 
+			and !tab[dir.y + pos.y][dir.x + pos.x]):
+				tab[dir.y + pos.y][dir.x + pos.x] = true
+				coordinates.append(Vector2i(dir.x + pos.x, dir.y + pos.y))
+				break
+		
 	for x in range(size):
 		for y in range(size):
-			if tab[x][y]:
-				continue
-			var instance = room_data.pick_random().instantiate()
-			instance.position.x = x * room_size.x
-			instance.position.y = y * room_size.y
-			add_child(instance)
-			pass
+			if tab[y][x]:
+				var instance = room_data.pick_random().room_reference.instantiate()
+				instance.position.x = (x - size / 2) * room_size.x
+				instance.position.y = y * room_size.y
+				add_child(instance)
+				if instance is Room:
+					#instance.doors
+					pass
