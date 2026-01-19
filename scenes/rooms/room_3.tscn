@@ -18,3 +18,15 @@ tile_set = ExtResource("2_sr7rr")
 
 [node name="WeaponTest" parent="." instance=ExtResource("3_g5ssp")]
 position = Vector2(109, -178)
+
+[connection signal="body_entered" from="Props/Spikes" to="Props/Spikes" method="_on_body_entered"]
+[connection signal="body_entered" from="Props/@Area2D@38067" to="Props/@Area2D@38067" method="_on_body_entered"]
+[connection signal="body_entered" from="Props/@Area2D@38068" to="Props/@Area2D@38068" method="_on_body_entered"]
+[connection signal="body_entered" from="Props/@Area2D@38069" to="Props/@Area2D@38069" method="_on_body_entered"]
+[connection signal="body_entered" from="Props/@Area2D@38070" to="Props/@Area2D@38070" method="_on_body_entered"]
+[connection signal="body_entered" from="Props/@Area2D@38071" to="Props/@Area2D@38071" method="_on_body_entered"]
+[connection signal="body_entered" from="Props/@Area2D@38072" to="Props/@Area2D@38072" method="_on_body_entered"]
+[connection signal="body_entered" from="Props/@Area2D@38073" to="Props/@Area2D@38073" method="_on_body_entered"]
+[connection signal="body_entered" from="Props/KeyCollectible" to="Props/KeyCollectible" method="_on_body_entered"]
+[connection signal="body_entered" from="Props/HeartCollectible" to="Props/HeartCollectible" method="_on_body_entered"]
+[connection signal="body_entered" from="Props/@Area2D@38075" to="Props/@Area2D@38075" method="_on_body_entered"]

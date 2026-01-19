@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="AllRoomData" load_steps=11 format=3 uid="uid://cbfmq3iludnjk"]
+[gd_resource type="Resource" script_class="AllRoomData" load_steps=11 format=3 uid="uid://b4fu4mwt40pk1"]
 
 [ext_resource type="Script" uid="uid://b3pvvx65rfh5g" path="res://scripts/all_rooms_data.gd" id="1_0nul0"]
 [ext_resource type="Script" uid="uid://bbqi8weov0twl" path="res://scripts/room_data.gd" id="1_6ry5b"]
@@ -19,6 +19,7 @@ metadata/_custom_type_script = "uid://bbqi8weov0twl"
 
 [sub_resource type="Resource" id="Resource_w4mfr"]
 script = ExtResource("1_6ry5b")
+room_shape = Array[Vector2i]([Vector2i(0, 1)])
 room_reference = ExtResource("4_w4mfr")
 metadata/_custom_type_script = "uid://bbqi8weov0twl"
 
