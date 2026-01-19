@@ -2,7 +2,6 @@ class_name main_scene extends Node2D
 
 @export var room_data : AllRoomData
 
-const room_size : Vector2i = Vector2i( 352, -288 )
 var directions : Array[Vector2i] = [Vector2i( 1, 0 ), Vector2i( -1, 0 ), 
 Vector2i( 0, 1 ), Vector2i( 0, -1 )]
 
@@ -48,8 +47,8 @@ func generate_dungeons(size : int = 5) -> void:
 		for y in range(size):
 			if tab[y][x]:
 				var instance = room_data.Rooms.pick_random().room_reference.instantiate()
-				instance.position.x = (x - size / 2) * room_size.x
-				instance.position.y = y * room_size.y
+				instance.position.x = (x - size / 2) * room_data.RoomSize.x
+				instance.position.y = -y * room_data.RoomSize.y
 				add_child(instance)
 				if instance is Room:
 					#instance.doors
