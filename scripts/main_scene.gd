@@ -9,7 +9,7 @@ func _ready() -> void:
 	generate_dungeons()
 	pass
 
-func generate_dungeons(size : int = 5) -> void:
+func generate_dungeons(size : int = 5, biome : RoomData.RoomBiome = RoomData.RoomBiome.Cemetary) -> void:
 	# Fill the tab
 	var tab : Array[Array] = []
 	var sub_tab : Array[bool] = []
@@ -48,7 +48,7 @@ func generate_dungeons(size : int = 5) -> void:
 			if tmp_fill_tab[y][x]:
 				var tmp_room : RoomData = room_data.Rooms.filter(
 					func(roomData):
-					return check_room_fit_in(roomData, tmp_fill_tab, Vector2i(x, y))
+					return check_room_fit_in(roomData, tmp_fill_tab, Vector2i(x, y)) and roomData.room_biome == biome
 				).pick_random()
 				tmp_fill_tab[y][x] = false
 				for dir in tmp_room.room_shape:
@@ -59,9 +59,9 @@ func generate_dungeons(size : int = 5) -> void:
 				instance.position.x = (x - size / 2) * room_data.RoomSize.x
 				instance.position.y = -y * room_data.RoomSize.y
 				add_child(instance)
-				if instance is Room:
-					#instance.doors
-					pass
+				
+	for room in Room.all_rooms:
+		pass
 
 # 0 is false, 1 is true, 2 is out of bounds
 func check_coordinates(tab : Array[Array], value : Vector2i) -> int:

@@ -49,24 +49,24 @@ func on_enter_room(from : Room) -> void:
 	_cam.set_bounds(camera_bounds)
 
 
-func get_adjacent_room(orientation : Utils.ORIENTATION, from : Vector2) -> Room:
-	var dir : Vector2i = Utils.OrientationToDir(orientation)
-	var adjacent_pos : Vector2i = room_pos + dir + get_position_offset(from)
+#func get_adjacent_room(orientation : Utils.ORIENTATION, from : Vector2) -> Room:
+	#var dir : Vector2i = Utils.OrientationToDir(orientation)
+	#var adjacent_pos : Vector2i = room_pos + dir + get_position_offset(from)
+#
+	#for room in all_rooms:
+		#if is_room_adjacent(room, adjacent_pos):
+			#return room
+			#
+	#return null
 
-	for room in all_rooms:
-		if is_room_adjacent(room, adjacent_pos):
-			return room
-			
-	return null
 
-
-func is_room_adjacent(room : Room, adjacent_pos : Vector2) -> bool:
-	return (
-		adjacent_pos.x >= room.room_pos.x
-		&& adjacent_pos.y >= room.room_pos.y
-		&& adjacent_pos.x < room.room_pos.x + room.room_size.x
-		&& adjacent_pos.y < room.room_pos.y + room.room_size.y
-	)
+#func is_room_adjacent(room : Room, adjacent_pos : Vector2) -> bool:
+	#return (
+		#adjacent_pos.x >= room.room_pos.x
+		#&& adjacent_pos.y >= room.room_pos.y
+		#&& adjacent_pos.x < room.room_pos.x + room.room_size.x
+		#&& adjacent_pos.y < room.room_pos.y + room.room_size.y
+	#)
 
 
 func get_door(orientation : Utils.ORIENTATION, from : Vector2) -> Door:

@@ -14,8 +14,8 @@ room_data = ExtResource("2_rt2n2")
 [node name="Dungeon" type="Node2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(175, -145)
-zoom = Vector2(2.25, 2.25)
+position = Vector2(96, -80)
+zoom = Vector2(0.38, 0.38)
 script = ExtResource("2_liovv")
 
 [node name="Player" parent="." instance=ExtResource("1_qspk8")]

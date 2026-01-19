@@ -1,18 +1,18 @@
 class_name Door extends Node2D
 
-enum STATE {OPEN = 0, CLOSED = 1, WALL = 2, SECRET = 3}
+enum STATE {OPEN = 0, CLOSED = 1, WALL = 2}
 
 @export var closedNode : Node2D
 @export var openNode : Node2D
-@export var wallNode : Node2D
-@export var secretNode : Node2D
 
-var orientation : Utils.ORIENTATION
 var state : STATE
+
+var connected_door : Door
+signal door_state_changed(new_value : STATE)
 
 var _room : Room
 
-@onready var collision = $"CollisionShape2D"
+@onready var collision = $"DoorArea2D"
 
 
 func _ready() -> void:
@@ -27,25 +27,6 @@ func _ready() -> void:
 	_room = node
 	_room.doors.push_back(self)
 
-	var room_bounds : Rect2 = _room.get_local_bounds()
-	var ratio : float = room_bounds.size.x / room_bounds.size.y
-	var dir : Vector2 = position - room_bounds.get_center()
-
-	if abs(dir.x) > abs(dir.y) * ratio:
-		orientation = Utils.ORIENTATION.EAST if dir.x > 0 else Utils.ORIENTATION.WEST
-	else:
-		orientation = Utils.ORIENTATION.NORTH if dir.y < 0 else Utils.ORIENTATION.SOUTH
-
-	rotation_degrees = Utils.OrientationToAngle(orientation)
-	if closedNode.visible:
-		set_state(STATE.CLOSED)
-	elif openNode.visible:
-		set_state(STATE.OPEN)
-	elif wallNode.visible:
-		set_state(STATE.WALL)
-	elif secretNode.visible:
-		set_state(STATE.SECRET)
-
 
 func try_unlock() -> void:
 	if state != STATE.CLOSED || Player.Instance.key_count <= 0:
@@ -53,31 +34,36 @@ func try_unlock() -> void:
 
 	Player.Instance.key_count -= 1
 	set_state(STATE.OPEN)
+	
 
-	var next_room = _room.get_adjacent_room(orientation, position)
-	if next_room:
-		var next_door = next_room.get_door(Utils.OppositeOrientation(orientation), position)
-		if next_door != null:
-			next_door.set_state(STATE.OPEN)
-
+func setup() -> void:
+	var otherAreas : Array[Area2D] = collision.get_overlapping_areas()
+	for area in otherAreas:
+		var parent = area.get_parent()
+		if parent is Door:
+			connected_door = parent
+			connected_door.door_state_changed.connect(set_state_manually)
+			pass
+		pass
+	pass
 
 func set_state(new_state : STATE) -> void:
+	set_state_manually(new_state)
+	door_state_changed.emit(state)
+	
+func set_state_manually(new_state : STATE) -> void:
 	closedNode.visible = false
 	openNode.visible = false
-	wallNode.visible = false
-	secretNode.visible = false
 
 	state = new_state
 	match state:
-		STATE.CLOSED:
+		STATE.CLOSED, STATE.WALL:
 			closedNode.visible = true
 			collision.set_deferred("disabled", false)
 		STATE.OPEN:
 			openNode.visible = true
 			collision.set_deferred("disabled", true)
-		STATE.WALL:
-			wallNode.visible = true
-			collision.set_deferred("disabled", false)
-		STATE.SECRET:
-			secretNode.visible = true
-			collision.set_deferred("disabled", true)
+
+func _exit_tree() -> void:
+	for dict in door_state_changed.get_connections():
+		door_state_changed.disconnect(dict.callable)
