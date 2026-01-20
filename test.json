@@ -1,0 +1,84 @@
+{
+  "origin": [
+    "#setItem# ;La quete : #queteStory#; L'item : #itemDesc#"
+  ],
+
+  "setItem": [
+    "[item:epee]#setIndice1Epee##setIndice2#",
+    "[item:masse]#setIndice1Masse##setIndice2#",
+    "[item:lance]#setIndice1Lance##setIndice2#",
+    "[item:hache]#setIndice1Hache##setIndice2#"
+  ],
+
+  "setIndice1Epee": [
+    "[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]",
+    "[indiceQ1:abimé][indiceI1:fissurée][indiceQ1Extend:vieux, abimé, cassé][indiceI1Extend:ayant bien servit, elle est couverte de fissure]",
+    "[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]",
+    "[indiceQ1:tordue][indiceI1:courbe][indiceQ1Extend:tordu, d'ailleur j'ai jamais compris qui l'avais plié comme ca][indiceI1Extend: courbe]"
+  ],
+  "setIndice1Masse": [
+    "[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
+    "[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]",
+    "[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]",
+    "[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]"
+  ],
+  "setIndice1Lance": [
+    "[indiceQ1:pointu][indiceI1:perforante][indiceQ1Extend:pointu][indiceI1Extend:à la tête perforante]",
+    "[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]",
+    "[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]",
+    "[indiceQ1:invisible][indiceI1:flou][indiceQ1Extend:presque invisible][indiceI1Extend:... flou ? il est difficile a décrire]"
+  ],
+  "setIndice1Hache": [
+    "[indiceQ1:menacant][indiceI1:dangereux][indiceQ1Extend:inquiétant][indiceI1Extend:maudite, imprégné d'un aura meurtrière]",
+    "[indiceQ1:instable][indiceI1:vibrante][indiceQ1Extend:, on aurait dit qu'il serais capable d'exploser a totu moment][indiceI1Extend:qui vibre constament, probablement instable]",
+    "[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
+    "[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]"
+  ],
+
+  "setIndice2": [
+    "[indiceQ2:héritage][indiceI2:manufacture humaine][indiceQ2Extend:de famille][indiceI2Extend:créé par des piteux humains]",
+    "[indiceQ2:époque sombre][indiceI2:grande révolution humaine][indiceQ2Extend:représentant les pires heures humaines][indiceI2Extend:datant de la première guerre civile humaine]",
+    "[indiceQ2:sainte][indiceI2:béni][indiceQ2Extend:divin][indiceI2Extend:couverte d'eau de dieu]",
+    "[indiceQ2:banale][indiceI2:commune][indiceQ2Extend:comme les autres][indiceI2Extend:sans petit truc en plus]"
+  ],
+
+  "queteStory": [
+    "#greeting.capitalize# #compliment# #joueur#, #intro# #problème# #indiceQ1Extend#, #indiceQ2Extend#. #question.capitalize# #solution# #politesse# ?"
+  ],
+  "greeting": [
+    "bonjour",
+    "hoy"
+  ],
+  "compliment": [
+    "douce",
+    "affreuse"
+  ],
+  "joueur": [
+    "sorcière",
+    "mage"
+  ],
+  "intro": [
+    "malheur",
+    "je viens a vous"
+  ],
+  "problème": [
+    "j'ai égaré mon objet ",
+    "moi perdre objet "
+  ],
+  "question": [
+    "peut tu m'aider",
+    "aide moi"
+  ],
+  "solution": [
+    "à retrouver mon objet",
+    "je ne sais plus quoi faire"
+  ],
+  "politesse": [
+    "siouplait",
+    "c'est un ordre"
+  ],
+
+  "itemDesc": [
+    "Une #item# #indiceI1Extend#, #indiceI2Extend#"
+  ]
+}

@@ -2,6 +2,7 @@ class_name Hud extends CanvasLayer
 
 @export var heart_scene : PackedScene
 @export var label : Label
+@export var itemLabel : Label
 
 var previous_life : int
 

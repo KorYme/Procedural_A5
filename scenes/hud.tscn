@@ -2,12 +2,27 @@
 
 [ext_resource type="Script" uid="uid://bet45gulqsrwk" path="res://scripts/hud.gd" id="1_ftoh2"]
 [ext_resource type="PackedScene" uid="uid://bxb3sh2rsgn4j" path="res://scenes/heart.tscn" id="2_fymyw"]
-[ext_resource type="Texture2D" uid="uid://dgfig18kthiid" path="res://icon.svg" id="3_5ysmq"]
 
-[node name="hud" type="CanvasLayer" node_paths=PackedStringArray("label")]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oo0fn"]
+
+[node name="hud" type="CanvasLayer" node_paths=PackedStringArray("label", "itemLabel")]
 script = ExtResource("1_ftoh2")
 heart_scene = ExtResource("2_fymyw")
-label = NodePath("Quest/Label")
+label = NodePath("Quest/QuestLabel")
+itemLabel = NodePath("ItemLabel")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(751.99994, 147)
+scale = Vector2(1501.518, 60)
+texture = SubResource("PlaceholderTexture2D_oo0fn")
+
+[node name="ItemLabel" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 135.0
+offset_right = 115.0
+offset_bottom = 158.0
+text = "No textqsdqsd"
 
 [node name="Quest" type="BoxContainer" parent="."]
 offset_top = 550.0
@@ -16,13 +31,13 @@ offset_bottom = 573.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Quest"]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(271, 14)
-scale = Vector2(4.2863193, 0.4425216)
-texture = ExtResource("3_5ysmq")
+position = Vector2(749.99994, 12)
+scale = Vector2(1501.518, 60)
+texture = SubResource("PlaceholderTexture2D_oo0fn")
 
-[node name="Label" type="Label" parent="Quest"]
+[node name="QuestLabel" type="Label" parent="Quest"]
 layout_mode = 2
-text = "qfdfsfddddddddddddddddddddddddddddddddddddddddddddddddd"
+text = "No text"
 
 [node name="LifeContainer" type="HBoxContainer" parent="."]
 offset_right = 170.0
