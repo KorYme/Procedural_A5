@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://dtdfaefxq5nnw"]
 
 [ext_resource type="Script" uid="uid://b73su8tlsaqn1" path="res://scripts/attack.gd" id="1_pqjam"]
-[ext_resource type="Texture2D" uid="uid://coomnanjg4knk" path="res://sprites/placeholder.png" id="2_hb4ip"]
+[ext_resource type="Texture2D" uid="uid://bskt4u81uro4g" path="res://sprites/Tiles/Colored/tile_0070.png" id="2_pqjam"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_45qmg"]
-size = Vector2(26, 34)
+size = Vector2(14, 37)
 
 [node name="PlayerAttack" type="Area2D"]
 collision_layer = 2
@@ -12,12 +12,14 @@ script = ExtResource("1_pqjam")
 knockback_speed = 300.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20.5, 1.1920929e-07)
+rotation = 1.5707964
 shape = SubResource("RectangleShape2D_45qmg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 1, 1, 0.27451)
-position = Vector2(-2.38419e-07, 0)
-scale = Vector2(6.5, 8.5)
-texture = ExtResource("2_hb4ip")
+position = Vector2(19.887112, 0.12585855)
+rotation = 0.7853982
+scale = Vector2(3.4165065, 3.3720086)
+texture = ExtResource("2_pqjam")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -9,13 +9,10 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3msj"]
 size = Vector2(32, 32)
 
-[node name="Door" type="StaticBody2D" node_paths=PackedStringArray("closedNode", "openNode", "wallNode", "secretNode")]
-position = Vector2(0, 1)
+[node name="Door" type="StaticBody2D" node_paths=PackedStringArray("closedNode", "openNode")]
 script = ExtResource("1_3eldu")
 closedNode = NodePath("Closed")
 openNode = NodePath("Open")
-wallNode = NodePath("Wall")
-secretNode = NodePath("Secret")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_470b0")
