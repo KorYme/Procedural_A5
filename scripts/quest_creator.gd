@@ -4,6 +4,7 @@ class_name QuestCreator extends Node
 
 var questDialogue : String
 var itemDesc : String
+@export var itemsBatch : Array[ItemData]
 
 var currentQuest : Quest
 
@@ -26,7 +27,7 @@ static func LoadJson(path: String) -> Dictionary:
 			
 	return json.data
 	
-func CreateDialogue():
+func CreateQuest():
 	var data = LoadJson("res://Pnjson/bete.json")
 	var grammar = Tracery.Grammar.new(data)
 	
@@ -47,10 +48,9 @@ func CreateDialogue():
 	grammar._save_data["indiceI1"], grammar._save_data["indiceI2"])
 
 	currentQuest = Quest.new(currentQuestItem, sentenceAray[1], sentenceAray[0])
+	itemsBatch = ItemGenerator.GenerateItemBatch(currentQuestItem, 5)
 	print(sentence)
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dialogue"):
-		CreateDialogue()
-	if Input.is_action_just_pressed("Attack"):
-		ItemGenerator.GenerateItem(ItemData.new("n","r","t"))
+		CreateQuest()

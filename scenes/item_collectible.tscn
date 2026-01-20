@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsv48c60vqne2"]
+
+[ext_resource type="Script" uid="uid://d0ufgduhrp8q1" path="res://scenes/item_collectible.gd" id="1_a1h84"]
+[ext_resource type="PackedScene" uid="uid://dov4nkfsf27hs" path="res://scenes/heart_collectible.tscn" id="2_af527"]
+
+[node name="ItemCollectible" type="Node2D"]
+script = ExtResource("1_a1h84")
+
+[node name="HeartCollectible" parent="." instance=ExtResource("2_af527")]

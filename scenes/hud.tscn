@@ -5,9 +5,11 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oo0fn"]
 
-[node name="hud" type="CanvasLayer"]
+[node name="hud" type="CanvasLayer" node_paths=PackedStringArray("label", "itemLabel")]
 script = ExtResource("1_ftoh2")
 heart_scene = ExtResource("2_fymyw")
+label = NodePath("ItemToSearchAnchor/QuestClueVBox/ItemDesc1")
+itemLabel = NodePath("QuestClueAnchor/QuestClueVBox/Clue1")
 
 [node name="LifeContainer" type="HBoxContainer" parent="."]
 anchors_preset = 1
