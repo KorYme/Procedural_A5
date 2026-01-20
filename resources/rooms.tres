@@ -1,0 +1,186 @@
+[gd_resource type="Resource" script_class="AllRoomData" load_steps=49 format=3 uid="uid://cfw2u1fdhsshj"]
+
+[ext_resource type="Script" uid="uid://bbqi8weov0twl" path="res://scripts/room_data.gd" id="1_y6qqy"]
+[ext_resource type="PackedScene" uid="uid://dh5b6jjc2fqyt" path="res://scenes/rooms/Graveyard/C-01.tscn" id="2_0gjvv"]
+[ext_resource type="Script" uid="uid://b3pvvx65rfh5g" path="res://scripts/all_rooms_data.gd" id="2_jse7f"]
+[ext_resource type="PackedScene" uid="uid://dy3upe1iv7mbj" path="res://scenes/rooms/Graveyard/C-03.tscn" id="3_huub4"]
+[ext_resource type="PackedScene" uid="uid://c3jv3tewyna7e" path="res://scenes/rooms/Graveyard/C-04.tscn" id="4_5gs8x"]
+[ext_resource type="PackedScene" uid="uid://cbd7jb4qtj81r" path="res://scenes/rooms/Graveyard/C-05.tscn" id="5_fq5ds"]
+[ext_resource type="PackedScene" uid="uid://6fyso5mogjqa" path="res://scenes/rooms/Graveyard/C-06.tscn" id="6_y0qri"]
+[ext_resource type="PackedScene" uid="uid://yl28rht6quxs" path="res://scenes/rooms/Graveyard/C-07.tscn" id="7_6tbfe"]
+[ext_resource type="PackedScene" uid="uid://cqr2fx78f5bdk" path="res://scenes/rooms/Graveyard/C-08.tscn" id="8_bo783"]
+[ext_resource type="PackedScene" uid="uid://ivoj02blnd3l" path="res://scenes/rooms/Forest/F-01.tscn" id="9_aift6"]
+[ext_resource type="PackedScene" uid="uid://c6okefbdmqt1c" path="res://scenes/rooms/Forest/F-02.tscn" id="10_0l36y"]
+[ext_resource type="PackedScene" uid="uid://qfworw3wutwi" path="res://scenes/rooms/Forest/F-03.tscn" id="11_p8kgf"]
+[ext_resource type="PackedScene" uid="uid://q8vpcg4drry7" path="res://scenes/rooms/Forest/F-04.tscn" id="12_bwdgb"]
+[ext_resource type="PackedScene" uid="uid://pqqkr15m7esn" path="res://scenes/rooms/Forest/F-05.tscn" id="13_htdta"]
+[ext_resource type="PackedScene" uid="uid://b4v5rtd8utu7w" path="res://scenes/rooms/Forest/F-06.tscn" id="14_7cd5e"]
+[ext_resource type="PackedScene" uid="uid://cehm4avqrqe0l" path="res://scenes/rooms/Forest/F-07.tscn" id="15_6lh4l"]
+[ext_resource type="PackedScene" uid="uid://bdeigxuu2u6k2" path="res://scenes/rooms/Forest/F-08.tscn" id="16_itdvw"]
+[ext_resource type="PackedScene" uid="uid://cimvuer6tlb50" path="res://scenes/rooms/Mountain/M-01.tscn" id="17_7a5da"]
+[ext_resource type="PackedScene" uid="uid://dcsf8gsda2b07" path="res://scenes/rooms/Mountain/M-02.tscn" id="18_q0wy4"]
+[ext_resource type="PackedScene" uid="uid://c6xhts12wasju" path="res://scenes/rooms/Mountain/M-03.tscn" id="19_b2so1"]
+[ext_resource type="PackedScene" uid="uid://c8ukdd124yfyl" path="res://scenes/rooms/Mountain/M-04.tscn" id="20_bs0fe"]
+[ext_resource type="PackedScene" uid="uid://yi8a6p4k1rhl" path="res://scenes/rooms/Mountain/M-05.tscn" id="21_nlpgx"]
+[ext_resource type="PackedScene" uid="uid://bphhcgukx12s3" path="res://scenes/rooms/Mountain/M-06.tscn" id="22_pua05"]
+[ext_resource type="PackedScene" uid="uid://wj01an6725ci" path="res://scenes/rooms/Mountain/M-07.tscn" id="23_rxlps"]
+[ext_resource type="PackedScene" uid="uid://cseh7avy1v0ub" path="res://scenes/rooms/Mountain/M-08.tscn" id="24_1y65m"]
+
+[sub_resource type="Resource" id="Resource_kwbyj"]
+script = ExtResource("1_y6qqy")
+room_shape = Array[Vector2i]([Vector2i(0, 0)])
+room_reference = ExtResource("2_0gjvv")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_4akss"]
+script = ExtResource("1_y6qqy")
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(1, 1)])
+room_reference = ExtResource("3_huub4")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_ei6ji"]
+script = ExtResource("1_y6qqy")
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0)])
+room_reference = ExtResource("4_5gs8x")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_ru2uf"]
+script = ExtResource("1_y6qqy")
+room_shape = Array[Vector2i]([Vector2i(0, 0)])
+room_reference = ExtResource("5_fq5ds")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_4y6ll"]
+script = ExtResource("1_y6qqy")
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(-1, 2), Vector2i(1, 2)])
+room_reference = ExtResource("6_y0qri")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_c0yoa"]
+script = ExtResource("1_y6qqy")
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(1, 1), Vector2i(1, 2)])
+room_reference = ExtResource("7_6tbfe")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_p77hr"]
+script = ExtResource("1_y6qqy")
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(-1, 1), Vector2i(1, 1)])
+room_reference = ExtResource("8_bo783")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_4i77e"]
+script = ExtResource("1_y6qqy")
+room_biome = 1
+room_shape = Array[Vector2i]([Vector2i(0, 0)])
+room_reference = ExtResource("9_aift6")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_l4s82"]
+script = ExtResource("1_y6qqy")
+room_biome = 1
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(0, 1)])
+room_reference = ExtResource("10_0l36y")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_eqpx7"]
+script = ExtResource("1_y6qqy")
+room_biome = 1
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(1, 1)])
+room_reference = ExtResource("11_p8kgf")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_34uqv"]
+script = ExtResource("1_y6qqy")
+room_biome = 1
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0)])
+room_reference = ExtResource("12_bwdgb")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_rfq52"]
+script = ExtResource("1_y6qqy")
+room_biome = 1
+room_shape = Array[Vector2i]([Vector2i(0, 0)])
+room_reference = ExtResource("13_htdta")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_tweqo"]
+script = ExtResource("1_y6qqy")
+room_biome = 1
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(-1, 2), Vector2i(1, 2)])
+room_reference = ExtResource("14_7cd5e")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_14hki"]
+script = ExtResource("1_y6qqy")
+room_biome = 1
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(1, 1), Vector2i(1, 2)])
+room_reference = ExtResource("15_6lh4l")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_vvvsg"]
+script = ExtResource("1_y6qqy")
+room_biome = 1
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(-1, 1), Vector2i(1, 1)])
+room_reference = ExtResource("16_itdvw")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_beauv"]
+script = ExtResource("1_y6qqy")
+room_biome = 3
+room_shape = Array[Vector2i]([Vector2i(0, 0)])
+room_reference = ExtResource("17_7a5da")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_hfyvu"]
+script = ExtResource("1_y6qqy")
+room_biome = 3
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(0, 1)])
+room_reference = ExtResource("18_q0wy4")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_piqi1"]
+script = ExtResource("1_y6qqy")
+room_biome = 3
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(1, 1)])
+room_reference = ExtResource("19_b2so1")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_0ksep"]
+script = ExtResource("1_y6qqy")
+room_biome = 3
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0)])
+room_reference = ExtResource("20_bs0fe")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_cj0nv"]
+script = ExtResource("1_y6qqy")
+room_biome = 3
+room_shape = Array[Vector2i]([Vector2i(0, 0)])
+room_reference = ExtResource("21_nlpgx")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_uvlsd"]
+script = ExtResource("1_y6qqy")
+room_biome = 3
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(-1, 2), Vector2i(1, 2)])
+room_reference = ExtResource("22_pua05")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_er4eo"]
+script = ExtResource("1_y6qqy")
+room_biome = 3
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(1, 1), Vector2i(1, 2)])
+room_reference = ExtResource("23_rxlps")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_faitv"]
+script = ExtResource("1_y6qqy")
+room_biome = 3
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(1, 1), Vector2i(-1, 1)])
+room_reference = ExtResource("24_1y65m")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[resource]
+script = ExtResource("2_jse7f")
+Rooms = Array[ExtResource("1_y6qqy")]([SubResource("Resource_kwbyj"), SubResource("Resource_4akss"), SubResource("Resource_4akss"), SubResource("Resource_ei6ji"), SubResource("Resource_ru2uf"), SubResource("Resource_4y6ll"), SubResource("Resource_c0yoa"), SubResource("Resource_p77hr"), SubResource("Resource_4i77e"), SubResource("Resource_l4s82"), SubResource("Resource_eqpx7"), SubResource("Resource_34uqv"), SubResource("Resource_rfq52"), SubResource("Resource_tweqo"), SubResource("Resource_14hki"), SubResource("Resource_vvvsg"), SubResource("Resource_beauv"), SubResource("Resource_hfyvu"), SubResource("Resource_piqi1"), SubResource("Resource_0ksep"), SubResource("Resource_cj0nv"), SubResource("Resource_uvlsd"), SubResource("Resource_er4eo"), SubResource("Resource_faitv")])
+metadata/_custom_type_script = "uid://b3pvvx65rfh5g"
