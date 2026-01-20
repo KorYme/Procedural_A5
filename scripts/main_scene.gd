@@ -61,7 +61,8 @@ func generate_dungeons(size : int = 5, biome : RoomData.RoomBiome = RoomData.Roo
 				add_child(instance)
 				
 	for room in Room.all_rooms:
-		pass
+		for door in room.doors:
+			door.setup()
 
 # 0 is false, 1 is true, 2 is out of bounds
 func check_coordinates(tab : Array[Array], value : Vector2i) -> int:

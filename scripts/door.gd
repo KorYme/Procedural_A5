@@ -12,7 +12,8 @@ signal door_state_changed(new_value : STATE)
 
 var _room : Room
 
-@onready var collision = $"DoorArea2D"
+@onready var door_collision = $"DoorCollision"
+@onready var other_door_raycast = $"DoorArea2D"
 
 
 func _ready() -> void:
@@ -34,18 +35,18 @@ func try_unlock() -> void:
 
 	Player.Instance.key_count -= 1
 	set_state(STATE.OPEN)
-	
+
 
 func setup() -> void:
-	var otherAreas : Array[Area2D] = collision.get_overlapping_areas()
+	var otherAreas : Array[Area2D] = other_door_raycast.get_overlapping_areas()
+	set_state_manually(STATE.WALL)
+	connected_door = null
 	for area in otherAreas:
 		var parent = area.get_parent()
 		if parent is Door:
 			connected_door = parent
 			connected_door.door_state_changed.connect(set_state_manually)
-			pass
-		pass
-	pass
+			return
 
 func set_state(new_state : STATE) -> void:
 	set_state_manually(new_state)
@@ -59,10 +60,11 @@ func set_state_manually(new_state : STATE) -> void:
 	match state:
 		STATE.CLOSED, STATE.WALL:
 			closedNode.visible = true
-			collision.set_deferred("disabled", false)
+			door_collision.set_deferred("disabled", false)
 		STATE.OPEN:
 			openNode.visible = true
-			collision.set_deferred("disabled", true)
+			door_collision.set_deferred("disabled", true)
+
 
 func _exit_tree() -> void:
 	for dict in door_state_changed.get_connections():
