@@ -5,11 +5,9 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oo0fn"]
 
-[node name="hud" type="CanvasLayer" node_paths=PackedStringArray("label", "itemLabel")]
+[node name="hud" type="CanvasLayer"]
 script = ExtResource("1_ftoh2")
 heart_scene = ExtResource("2_fymyw")
-label = NodePath("")
-itemLabel = NodePath("")
 
 [node name="LifeContainer" type="HBoxContainer" parent="."]
 anchors_preset = 1
@@ -87,3 +85,56 @@ text = "ItemDesc1"
 [node name="ItemDesc2" type="Label" parent="ItemToSearchAnchor/QuestClueVBox"]
 layout_mode = 2
 text = "ItemDesc2"
+
+[node name="ItemFullCenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemToSearchImage" type="Sprite2D" parent="ItemFullCenterContainer"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(19, -36)
+scale = Vector2(100, 100)
+texture = SubResource("PlaceholderTexture2D_oo0fn")
+
+[node name="ItemToSearchBackground" type="Sprite2D" parent="ItemFullCenterContainer"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(19, 89)
+scale = Vector2(500, 125)
+texture = SubResource("PlaceholderTexture2D_oo0fn")
+
+[node name="ItemDescFullCenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.5
+offset_top = 12.0
+offset_right = 86.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemDescFullVBoxContainer" type="VBoxContainer" parent="ItemDescFullCenterContainer"]
+layout_mode = 2
+
+[node name="ItemFullTitle" type="Label" parent="ItemDescFullCenterContainer/ItemDescFullVBoxContainer"]
+layout_mode = 2
+text = "Description de l'objet :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemFullDesc" type="Label" parent="ItemDescFullCenterContainer/ItemDescFullVBoxContainer"]
+layout_mode = 2
+text = "ItemFullDesc"
+horizontal_alignment = 1
+vertical_alignment = 1
