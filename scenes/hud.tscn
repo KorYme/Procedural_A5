@@ -8,38 +8,82 @@
 [node name="hud" type="CanvasLayer" node_paths=PackedStringArray("label", "itemLabel")]
 script = ExtResource("1_ftoh2")
 heart_scene = ExtResource("2_fymyw")
-label = NodePath("Quest/QuestLabel")
-itemLabel = NodePath("ItemLabel")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(751.99994, 147)
-scale = Vector2(1501.518, 60)
-texture = SubResource("PlaceholderTexture2D_oo0fn")
-
-[node name="ItemLabel" type="Label" parent="."]
-offset_left = 2.0
-offset_top = 135.0
-offset_right = 115.0
-offset_bottom = 158.0
-text = "No textqsdqsd"
-
-[node name="Quest" type="BoxContainer" parent="."]
-offset_top = 550.0
-offset_right = 389.0
-offset_bottom = 573.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Quest"]
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(749.99994, 12)
-scale = Vector2(1501.518, 60)
-texture = SubResource("PlaceholderTexture2D_oo0fn")
-
-[node name="QuestLabel" type="Label" parent="Quest"]
-layout_mode = 2
-text = "No text"
+label = NodePath("")
+itemLabel = NodePath("")
 
 [node name="LifeContainer" type="HBoxContainer" parent="."]
-offset_right = 170.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
 offset_bottom = 50.0
+grow_horizontal = 0
 theme_override_constants/separation = 10
+
+[node name="QuestClueAnchor" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 100.0
+
+[node name="QuestClueBackground" type="Sprite2D" parent="QuestClueAnchor"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(105, 55)
+scale = Vector2(200, 100)
+texture = SubResource("PlaceholderTexture2D_oo0fn")
+
+[node name="QuestClueVBox" type="VBoxContainer" parent="QuestClueAnchor"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 373.0
+offset_bottom = 294.0
+
+[node name="ClueText" type="Label" parent="QuestClueAnchor/QuestClueVBox"]
+layout_mode = 2
+text = "Indices de la quête :"
+
+[node name="Clue1" type="Label" parent="QuestClueAnchor/QuestClueVBox"]
+layout_mode = 2
+text = "Clue1"
+
+[node name="Clue2" type="Label" parent="QuestClueAnchor/QuestClueVBox"]
+layout_mode = 2
+text = "Clue2"
+
+[node name="ItemToSearchAnchor" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 200.0
+grow_vertical = 0
+
+[node name="ItemToSearchImage" type="Sprite2D" parent="ItemToSearchAnchor"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(55, 45)
+scale = Vector2(100, 100)
+texture = SubResource("PlaceholderTexture2D_oo0fn")
+
+[node name="ItemToSearchBackground" type="Sprite2D" parent="ItemToSearchAnchor"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-27.5, 45)
+scale = Vector2(200, 100)
+texture = SubResource("PlaceholderTexture2D_oo0fn")
+offset = Vector2(1.185, 0)
+
+[node name="QuestClueVBox" type="VBoxContainer" parent="ItemToSearchAnchor"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 10.0
+offset_right = 488.0
+offset_bottom = 294.0
+
+[node name="ItemDesc1" type="Label" parent="ItemToSearchAnchor/QuestClueVBox"]
+layout_mode = 2
+text = "ItemDesc1"
+
+[node name="ItemDesc2" type="Label" parent="ItemToSearchAnchor/QuestClueVBox"]
+layout_mode = 2
+text = "ItemDesc2"
