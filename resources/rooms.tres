@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="AllRoomData" load_steps=49 format=3 uid="uid://cfw2u1fdhsshj"]
+[gd_resource type="Resource" script_class="AllRoomData" load_steps=67 format=3 uid="uid://cfw2u1fdhsshj"]
 
 [ext_resource type="Script" uid="uid://bbqi8weov0twl" path="res://scripts/room_data.gd" id="1_y6qqy"]
 [ext_resource type="PackedScene" uid="uid://dh5b6jjc2fqyt" path="res://scenes/rooms/Graveyard/C-01.tscn" id="2_0gjvv"]
 [ext_resource type="Script" uid="uid://b3pvvx65rfh5g" path="res://scripts/all_rooms_data.gd" id="2_jse7f"]
+[ext_resource type="PackedScene" uid="uid://dbcj3bhu375j0" path="res://scenes/rooms/Graveyard/C-02.tscn" id="3_6464e"]
 [ext_resource type="PackedScene" uid="uid://dy3upe1iv7mbj" path="res://scenes/rooms/Graveyard/C-03.tscn" id="3_huub4"]
 [ext_resource type="PackedScene" uid="uid://c3jv3tewyna7e" path="res://scenes/rooms/Graveyard/C-04.tscn" id="4_5gs8x"]
 [ext_resource type="PackedScene" uid="uid://cbd7jb4qtj81r" path="res://scenes/rooms/Graveyard/C-05.tscn" id="5_fq5ds"]
@@ -25,11 +26,25 @@
 [ext_resource type="PackedScene" uid="uid://bphhcgukx12s3" path="res://scenes/rooms/Mountain/M-06.tscn" id="22_pua05"]
 [ext_resource type="PackedScene" uid="uid://wj01an6725ci" path="res://scenes/rooms/Mountain/M-07.tscn" id="23_rxlps"]
 [ext_resource type="PackedScene" uid="uid://cseh7avy1v0ub" path="res://scenes/rooms/Mountain/M-08.tscn" id="24_1y65m"]
+[ext_resource type="PackedScene" uid="uid://bp1qhyvdee31a" path="res://scenes/rooms/Swamp/S-01.tscn" id="26_7a5da"]
+[ext_resource type="PackedScene" uid="uid://c1svca1bdv0" path="res://scenes/rooms/Swamp/S-02.tscn" id="27_q0wy4"]
+[ext_resource type="PackedScene" uid="uid://cenmialvx3n42" path="res://scenes/rooms/Swamp/S-03.tscn" id="28_b2so1"]
+[ext_resource type="PackedScene" uid="uid://cqkp64opvjort" path="res://scenes/rooms/Swamp/S-04.tscn" id="29_bs0fe"]
+[ext_resource type="PackedScene" uid="uid://bm18wpyiowhst" path="res://scenes/rooms/Swamp/S-05.tscn" id="30_nlpgx"]
+[ext_resource type="PackedScene" uid="uid://keu0su7ddd74" path="res://scenes/rooms/Swamp/S-06.tscn" id="31_pua05"]
+[ext_resource type="PackedScene" uid="uid://d0sgh4fq0jmns" path="res://scenes/rooms/Swamp/S-07.tscn" id="32_rxlps"]
+[ext_resource type="PackedScene" uid="uid://qlobrugeki70" path="res://scenes/rooms/Swamp/S-08.tscn" id="33_1y65m"]
 
 [sub_resource type="Resource" id="Resource_kwbyj"]
 script = ExtResource("1_y6qqy")
 room_shape = Array[Vector2i]([Vector2i(0, 0)])
 room_reference = ExtResource("2_0gjvv")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_hfm24"]
+script = ExtResource("1_y6qqy")
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(0, 1)])
+room_reference = ExtResource("3_6464e")
 metadata/_custom_type_script = "uid://bbqi8weov0twl"
 
 [sub_resource type="Resource" id="Resource_4akss"]
@@ -180,7 +195,63 @@ room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Ve
 room_reference = ExtResource("24_1y65m")
 metadata/_custom_type_script = "uid://bbqi8weov0twl"
 
+[sub_resource type="Resource" id="Resource_q6qwg"]
+script = ExtResource("1_y6qqy")
+room_biome = 2
+room_shape = Array[Vector2i]([Vector2i(0, 0)])
+room_reference = ExtResource("26_7a5da")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_xmn4o"]
+script = ExtResource("1_y6qqy")
+room_biome = 2
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(0, 1)])
+room_reference = ExtResource("27_q0wy4")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_inrmy"]
+script = ExtResource("1_y6qqy")
+room_biome = 2
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(1, 1)])
+room_reference = ExtResource("28_b2so1")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_ufpbp"]
+script = ExtResource("1_y6qqy")
+room_biome = 2
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0)])
+room_reference = ExtResource("29_bs0fe")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_i0w7w"]
+script = ExtResource("1_y6qqy")
+room_biome = 2
+room_shape = Array[Vector2i]([Vector2i(0, 0)])
+room_reference = ExtResource("30_nlpgx")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_hivbl"]
+script = ExtResource("1_y6qqy")
+room_biome = 2
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(-1, 2), Vector2i(1, 2)])
+room_reference = ExtResource("31_pua05")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_bqsxy"]
+script = ExtResource("1_y6qqy")
+room_biome = 2
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(1, 1), Vector2i(1, 2)])
+room_reference = ExtResource("32_rxlps")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
+[sub_resource type="Resource" id="Resource_noc44"]
+script = ExtResource("1_y6qqy")
+room_shape = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(1, 1), Vector2i(-1, 1)])
+room_reference = ExtResource("33_1y65m")
+metadata/_custom_type_script = "uid://bbqi8weov0twl"
+
 [resource]
 script = ExtResource("2_jse7f")
-Rooms = Array[ExtResource("1_y6qqy")]([SubResource("Resource_kwbyj"), SubResource("Resource_4akss"), SubResource("Resource_4akss"), SubResource("Resource_ei6ji"), SubResource("Resource_ru2uf"), SubResource("Resource_4y6ll"), SubResource("Resource_c0yoa"), SubResource("Resource_p77hr"), SubResource("Resource_4i77e"), SubResource("Resource_l4s82"), SubResource("Resource_eqpx7"), SubResource("Resource_34uqv"), SubResource("Resource_rfq52"), SubResource("Resource_tweqo"), SubResource("Resource_14hki"), SubResource("Resource_vvvsg"), SubResource("Resource_beauv"), SubResource("Resource_hfyvu"), SubResource("Resource_piqi1"), SubResource("Resource_0ksep"), SubResource("Resource_cj0nv"), SubResource("Resource_uvlsd"), SubResource("Resource_er4eo"), SubResource("Resource_faitv")])
+RoomSize = Vector2(416, 352)
+Rooms = Array[ExtResource("1_y6qqy")]([SubResource("Resource_kwbyj"), SubResource("Resource_hfm24"), SubResource("Resource_4akss"), SubResource("Resource_ei6ji"), SubResource("Resource_ru2uf"), SubResource("Resource_4y6ll"), SubResource("Resource_c0yoa"), SubResource("Resource_p77hr"), SubResource("Resource_4i77e"), SubResource("Resource_l4s82"), SubResource("Resource_eqpx7"), SubResource("Resource_34uqv"), SubResource("Resource_rfq52"), SubResource("Resource_tweqo"), SubResource("Resource_14hki"), SubResource("Resource_vvvsg"), SubResource("Resource_beauv"), SubResource("Resource_hfyvu"), SubResource("Resource_piqi1"), SubResource("Resource_0ksep"), SubResource("Resource_cj0nv"), SubResource("Resource_uvlsd"), SubResource("Resource_er4eo"), SubResource("Resource_faitv"), SubResource("Resource_q6qwg"), SubResource("Resource_xmn4o"), SubResource("Resource_inrmy"), SubResource("Resource_ufpbp"), SubResource("Resource_i0w7w"), SubResource("Resource_hivbl"), SubResource("Resource_bqsxy"), SubResource("Resource_noc44")])
 metadata/_custom_type_script = "uid://b3pvvx65rfh5g"
