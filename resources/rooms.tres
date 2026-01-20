@@ -252,5 +252,6 @@ metadata/_custom_type_script = "uid://bbqi8weov0twl"
 
 [resource]
 script = ExtResource("2_jse7f")
+RoomSize = Vector2(416, 352)
 Rooms = Array[ExtResource("1_y6qqy")]([SubResource("Resource_kwbyj"), SubResource("Resource_hfm24"), SubResource("Resource_4akss"), SubResource("Resource_ei6ji"), SubResource("Resource_ru2uf"), SubResource("Resource_4y6ll"), SubResource("Resource_c0yoa"), SubResource("Resource_p77hr"), SubResource("Resource_4i77e"), SubResource("Resource_l4s82"), SubResource("Resource_eqpx7"), SubResource("Resource_34uqv"), SubResource("Resource_rfq52"), SubResource("Resource_tweqo"), SubResource("Resource_14hki"), SubResource("Resource_vvvsg"), SubResource("Resource_beauv"), SubResource("Resource_hfyvu"), SubResource("Resource_piqi1"), SubResource("Resource_0ksep"), SubResource("Resource_cj0nv"), SubResource("Resource_uvlsd"), SubResource("Resource_er4eo"), SubResource("Resource_faitv"), SubResource("Resource_q6qwg"), SubResource("Resource_xmn4o"), SubResource("Resource_inrmy"), SubResource("Resource_ufpbp"), SubResource("Resource_i0w7w"), SubResource("Resource_hivbl"), SubResource("Resource_bqsxy"), SubResource("Resource_noc44")])
 metadata/_custom_type_script = "uid://b3pvvx65rfh5g"
