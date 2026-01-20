@@ -33,17 +33,19 @@ texture = SubResource("PlaceholderTexture2D_oo0fn")
 [node name="QuestClueVBox" type="VBoxContainer" parent="QuestClueAnchor"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 10.0
-offset_right = 373.0
-offset_bottom = 294.0
+offset_top = 14.0
+offset_right = 200.0
+offset_bottom = 104.0
 
 [node name="ClueText" type="Label" parent="QuestClueAnchor/QuestClueVBox"]
 layout_mode = 2
 text = "Indices de la quête :"
 
 [node name="Clue1" type="Label" parent="QuestClueAnchor/QuestClueVBox"]
+custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
 text = "Clue1"
+autowrap_mode = 3
 
 [node name="Clue2" type="Label" parent="QuestClueAnchor/QuestClueVBox"]
 layout_mode = 2
@@ -73,18 +75,22 @@ offset = Vector2(1.185, 0)
 
 [node name="QuestClueVBox" type="VBoxContainer" parent="ItemToSearchAnchor"]
 layout_mode = 0
-offset_left = 125.0
+offset_left = 122.0
 offset_top = 10.0
-offset_right = 488.0
-offset_bottom = 294.0
+offset_right = 304.0
+offset_bottom = 92.0
 
 [node name="ItemDesc1" type="Label" parent="ItemToSearchAnchor/QuestClueVBox"]
+custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
 text = "ItemDesc1"
+autowrap_mode = 3
 
 [node name="ItemDesc2" type="Label" parent="ItemToSearchAnchor/QuestClueVBox"]
+custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
 text = "ItemDesc2"
+autowrap_mode = 3
 
 [node name="ItemFullCenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 8
@@ -111,6 +117,33 @@ position = Vector2(19, 89)
 scale = Vector2(500, 125)
 texture = SubResource("PlaceholderTexture2D_oo0fn")
 
+[node name="ItemDescFullVBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = 4.779999
+offset_right = 246.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemFullTitle" type="Label" parent="ItemDescFullVBoxContainer"]
+layout_mode = 2
+text = "Description de l'objet :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemFullDesc" type="Label" parent="ItemDescFullVBoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+text = "ItemFullDesc"
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 3
+
 [node name="ItemDescFullCenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -123,18 +156,3 @@ offset_right = 86.5
 offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="ItemDescFullVBoxContainer" type="VBoxContainer" parent="ItemDescFullCenterContainer"]
-layout_mode = 2
-
-[node name="ItemFullTitle" type="Label" parent="ItemDescFullCenterContainer/ItemDescFullVBoxContainer"]
-layout_mode = 2
-text = "Description de l'objet :"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ItemFullDesc" type="Label" parent="ItemDescFullCenterContainer/ItemDescFullVBoxContainer"]
-layout_mode = 2
-text = "ItemFullDesc"
-horizontal_alignment = 1
-vertical_alignment = 1
