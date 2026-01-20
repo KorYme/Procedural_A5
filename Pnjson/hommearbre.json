@@ -1,0 +1,84 @@
+{
+"origin": [
+"#setItem# La quete : #queteStory#; L'item : #itemDesc#"
+],
+"setItem": [
+"[item:hache]#setIndice1Hache##setIndice2#",
+"[item:masse]#setIndice1Masse##setIndice2#",
+"[item:lance]#setIndice1Lance##setIndice2#"
+],
+"setIndice1Epee": [
+"[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]",
+"[indiceQ1:abimé][indiceI1:fissurée][indiceQ1Extend:vieux, abimé, cassé][indiceI1Extend:ayant bien servit, elle est couverte de fissure]",
+"[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]",
+"[indiceQ1:tordue][indiceI1:courbe][indiceQ1Extend:tordu, d'ailleur j'ai jamais compris qui l'avais plié comme ca][indiceI1Extend: courbe]"
+],
+"setIndice1Masse": [
+"[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
+"[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]",
+"[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]",
+"[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]"
+],
+"setIndice1Lance": [
+"[indiceQ1:pointu][indiceI1:perforante][indiceQ1Extend:pointu][indiceI1Extend:à la tête perforante]",
+"[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]",
+"[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]",
+"[indiceQ1:invisible][indiceI1:flou][indiceQ1Extend:presque invisible][indiceI1Extend:... flou ? il est difficile a décrire]"
+],
+"setIndice1Hache": [
+"[indiceQ1:menacant][indiceI1:dangereux][indiceQ1Extend:inquiétant][indiceI1Extend:maudite, imprégné d'un aura meurtrière]",
+"[indiceQ1:instable][indiceI1:vibrante][indiceQ1Extend:, on aurait dit qu'il serais capable d'exploser a totu moment][indiceI1Extend:qui vibre constament, probablement instable]",
+"[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
+"[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]"
+],
+"setIndice2": [
+"[indiceQ2:héééritaaageee][indiceI2:manufacture homme-arbre][indiceQ2Extend:que mooon vieuuux chêêêne m'aaaavaiiit lééégueeer pouuuur tueer maaa premièèèère victime][indiceI2Extend:créer par les cruelles arbres]",
+"[indiceQ2:volé aux elfes][indiceI2:manufacture elfe modifier][indiceQ2Extend:que j'aiii vooolééé a uuun rigoolooo eeeeelfe][indiceI2Extend:elfe modifier par un arbre. Probablement pendant la guerre actuel]",
+"[indiceQ2:volé aux humains][indiceI2:manufacture humaine modifier][indiceQ2Extend:que j'aiii priiiiis suuur un huuumain quiii neeee respiraiiiit pluuuus][indiceI2Extend:humaine modifier par un arbre. Probablement à l'occasion d'un 'échange culturel']",
+"[indiceQ2:volé aux bêtes][indiceI2:manufacture bête modifier][indiceQ2Extend:que j'aiiii obteeeenuuuu ennn jouannnt aaa quiii suuurvit aaa un couup deee hachheee aveeec uuun chiieennn][indiceI2Extend:bestiale modifier par un arbre. Probablement un pillage issus d'un massacre d'une caravane]"
+],
+"queteStory": [
+"#greeting.capitalize# #compliment# #joueur#, #intro# #problème# #indiceQ1Extend#, #indiceQ2Extend#. #question.capitalize# #solution# ? #politesse.capitalize#."
+],
+"greeting": [
+"booonnnnjooouuur",
+"helllooooooo"
+],
+"compliment": [
+"geeennntiiiil",
+"douuuuce",
+"teeennnndre"
+],
+"joueur": [
+"daaaame",
+"maaaaage",
+"druiide"
+],
+"intro": [
+"aaaprès unnn meuuutre",
+"ennn jouannnt aveeec maaa nourriituuure",
+"suiiiiite àà un chaaaleuuureuuux baainn de saaannng eeet d'enntrraaaaaille"
+],
+"problème": [
+"j'aiiii laiiiisseeer s'échaaaapper moon ooobjet",
+"j'aaaai peeerduuu uuun ooobjet"
+],
+"question": [
+"vooootre maagie m'aiiideraiiit graaanndement",
+"pouuuuvezzz vouuuus aideeeer uuuun vieeeeille aaarbre",
+"jeeeee n'aiiii pluus laaaa sèèèève deee maa jeuuuunesse. Le voootre pouuurraiiit m'aiiideeer"
+],
+"solution": [
+"àààà retroouuuuver moooon ooobjet",
+"",
+"ààà rééécuupéérer mooon oobjeet"
+],
+"politesse": [
+"ceelaaa mee permeeetraiit dee reprennndre mees tuueriie",
+"s'iiiil vouuus plaiiit",
+"vouuus feeerieeez unn heuuureuuux",
+],
+"itemDesc": [
+"Une #item# #indiceI1Extend#, #indiceI2Extend#"
+]
+}

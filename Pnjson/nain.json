@@ -1,0 +1,83 @@
+{
+"origin": [
+"#setItem# La quete : #queteStory#; L'item : #itemDesc#"
+],
+"setItem": [
+"[item:hache]#setIndice1Hache##setIndice2#",
+"[item:masse]#setIndice1Masse##setIndice2#"
+],
+"setIndice1Epee": [
+"[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]",
+"[indiceQ1:abimé][indiceI1:fissurée][indiceQ1Extend:vieux, abimé, cassé][indiceI1Extend:ayant bien servit, elle est couverte de fissure]",
+"[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]",
+"[indiceQ1:tordue][indiceI1:courbe][indiceQ1Extend:tordu, d'ailleur j'ai jamais compris qui l'avais plié comme ca][indiceI1Extend: courbe]"
+],
+"setIndice1Masse": [
+"[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
+"[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]",
+"[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]",
+"[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]"
+],
+"setIndice1Lance": [
+"[indiceQ1:pointu][indiceI1:perforante][indiceQ1Extend:pointu][indiceI1Extend:à la tête perforante]",
+"[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]",
+"[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]",
+"[indiceQ1:invisible][indiceI1:flou][indiceQ1Extend:presque invisible][indiceI1Extend:... flou ? il est difficile a décrire]"
+],
+"setIndice1Hache": [
+"[indiceQ1:menacant][indiceI1:dangereux][indiceQ1Extend:inquiétant][indiceI1Extend:maudite, imprégné d'un aura meurtrière]",
+"[indiceQ1:instable][indiceI1:vibrante][indiceQ1Extend:, on aurait dit qu'il serais capable d'exploser a totu moment][indiceI1Extend:qui vibre constament, probablement instable]",
+"[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
+"[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]"
+],
+"setIndice2": [
+"[indiceQ2:héritage][indiceI2:manufacture naine][indiceQ2Extend:et familiale][indiceI2Extend:créer par le peuple aigri]",
+"[indiceQ2:fait maison][indiceI2:bricolé][indiceQ2Extend:de ma propre fabrication][indiceI2Extend:elle ne ressemble a rien. Surement du 'DIY'... tss...]",
+"[indiceQ2:pratique][indiceI2:multifonction][indiceQ2Extend: mais surtout bien pratique ! je pouvais tout faire avec][indiceI2Extend:on dirait qu'elle a été modifier pour servir d'outil multifonction]",
+"[indiceQ2:fantomatique][indiceI2:mi-nain/mi-fantomatique][indiceQ2Extend:je l'avais acheter auprès d'un fantome avant d'y apporter ma touche personnel][indiceI2Extend:c'est une de ses fameuses armes batarde que le peuple nain et fantomatique font ensemble]"
+],
+"queteStory": [
+"#greeting.capitalize# #compliment# #joueur#, #intro# #problème# #indiceQ1Extend#, #indiceQ2Extend#. #question.capitalize# #solution# ? #politesse.capitalize#."
+],
+"greeting": [
+"salut",
+"hé",
+"eh"
+],
+"compliment": [
+"affreuse",
+"hideuse",
+"grande"
+],
+"joueur": [
+"sorcière",
+"magicienne",
+"Godette"
+],
+"intro": [
+"lors de mes travaux",
+"...",
+"après avoir cogné mon orteil dans un coin de table"
+],
+"problème": [
+"j'ai perdu mon outils de travail",
+"j'ai egaré mon arme",
+"j'ai oublié mon outil"
+],
+"question": [
+"ma mémoire est floue Tu peux m'aider",
+"Aussi peu capable que tu es, aide moi"
+],
+"solution": [
+"à remplacer ce foutu objet",
+"à me rappeler"
+],
+"politesse": [
+"peut être que je te paierai",
+"tu auras l'honneur de la reconnaissance d'un nain",
+"dans ton incapacité, j'espère que tu trouveras quelque chose d'usable"
+],
+"itemDesc": [
+"Une #item# #indiceI1Extend#, #indiceI2Extend#"
+]
+}

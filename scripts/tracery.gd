@@ -238,6 +238,7 @@ class Grammar extends RefCounted:
 		
 	func _resolve_save_symbols( rule : String ) -> void:
 		var save_matches = _save_symbol_regex.search_all( rule )
+
 		for match_result in save_matches:
 			var match_value = match_result.strings[0]
 			

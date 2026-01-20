@@ -5,8 +5,10 @@ class_name QuestCreator extends Node
 var questDialogue : String
 var itemDesc : String
 
+var currentQuest : Quest
 
-func LoadJson(path: String) -> Dictionary:
+
+static func LoadJson(path: String) -> Dictionary:
 	var file = FileAccess.open(path, FileAccess.READ)
 	if file == null:
 		push_error("Eh gros le Json y pu la merde")
@@ -25,7 +27,7 @@ func LoadJson(path: String) -> Dictionary:
 	return json.data
 	
 func CreateDialogue():
-	var data = LoadJson("res://test.json")
+	var data = LoadJson("res://Pnjson/bete.json")
 	var grammar = Tracery.Grammar.new(data)
 	
 	var rng = RandomNumberGenerator.new()
@@ -34,11 +36,21 @@ func CreateDialogue():
 	
 	var sentence = grammar.flatten("#origin#")
 	var sentenceAray = sentence.split(";")
+	for i in grammar._save_data:
+		print(i + grammar._save_data[i])
+		
 	
-	hud.label.text = sentenceAray[1]
-	hud.itemLabel.text = sentenceAray[2]
-	print(sentence)
+	hud.label.text = sentenceAray[0]
+	hud.itemLabel.text = sentenceAray[1]
 
+	var currentQuestItem: ItemData = ItemData.new(grammar._save_data["item"],
+	grammar._save_data["indiceI1"], grammar._save_data["indiceI2"])
+
+	currentQuest = Quest.new(currentQuestItem, sentenceAray[1], sentenceAray[0])
+	print(sentence)
+	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dialogue"):
 		CreateDialogue()
+	if Input.is_action_just_pressed("Attack"):
+		ItemGenerator.GenerateItem(ItemData.new("n","r","t"))

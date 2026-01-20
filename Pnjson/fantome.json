@@ -1,0 +1,86 @@
+{
+"origin": [
+"#setItem# La quete : #queteStory#; L'item : #itemDesc#"
+],
+"setItem": [
+"[item:epee]#setIndice1Epee##setIndice2#",
+"[item:masse]#setIndice1Masse##setIndice2#",
+"[item:hache]#setIndice1Hache##setIndice2#"
+],
+"setIndice1Epee": [
+"[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]",
+"[indiceQ1:abimé][indiceI1:fissurée][indiceQ1Extend:vieux, abimé, cassé][indiceI1Extend:ayant bien servit, elle est couverte de fissure]",
+"[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]",
+"[indiceQ1:tordue][indiceI1:courbe][indiceQ1Extend:tordu, d'ailleur j'ai jamais compris qui l'avais plié comme ca][indiceI1Extend: courbe]"
+],
+"setIndice1Masse": [
+"[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
+"[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]",
+"[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]",
+"[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]"
+],
+"setIndice1Lance": [
+"[indiceQ1:pointu][indiceI1:perforante][indiceQ1Extend:pointu][indiceI1Extend:à la tête perforante]",
+"[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]",
+"[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]",
+"[indiceQ1:invisible][indiceI1:flou][indiceQ1Extend:presque invisible][indiceI1Extend:... flou ? il est difficile a décrire]"
+],
+"setIndice1Hache": [
+"[indiceQ1:menacant][indiceI1:dangereux][indiceQ1Extend:inquiétant][indiceI1Extend:maudite, imprégné d'un aura meurtrière]",
+"[indiceQ1:instable][indiceI1:vibrante][indiceQ1Extend:, on aurait dit qu'il serais capable d'exploser a totu moment][indiceI1Extend:qui vibre constament, probablement instable]",
+"[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
+"[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]"
+],
+"setIndice2": [
+"[indiceQ2:héritage][indiceI2:manufacture fantomatique][indiceQ2Extend:quE MOn mAîtRE mA léGUé][indiceI2Extend:créer par le mystérieux peuple fantome]",
+"[indiceQ2:naine][indiceI2:mi-fantomatique/mi-nain][indiceQ2Extend:Qu'uN NAIN m'AvaIS PReParer.][indiceI2Extend:c'est une de ces fameuses armes batarde que le peuple nain et fantomatique font ensemble]",
+"[indiceQ2:vestige][indiceI2:ancestrale][indiceQ2Extend:CeTte OBJet daTE de MON VivAnt, il Y A fOrT LONgtemps][indiceI2Extend:c'est rare de croisé une #item# si vieille]",
+"[indiceQ2:LEGENDAIRE][indiceI2:pale imitation][indiceQ2Extend:Un OBJET LegendAirE AyANT serVIT a TueR de NOMbreUX MOnStrE.... EXCALIBUR][indiceI2Extend:.... on dirait .... une grossière imitations d'excalibur.]"
+],
+"queteStory": [
+"#greeting.capitalize# #compliment# #joueur#, #intro# #problème# #indiceQ1Extend#, #indiceQ2Extend#. #question.capitalize# #solution# ? #politesse.capitalize#. 👻💀✨"
+],
+"greeting": [
+"BOOOO! sOir 👻😱",
+"urrhrhrurhrurhrurh... yo 👀💀",
+"...hhhhhhhh...hello 😶‍🌫️🕯️"
+],
+"compliment": [
+"aMie 😊",
+"ChaLeUREUSe 🔥😌",
+"MadAMe LA 🎩✨",
+"... 🤷"
+],
+"joueur": [
+"SoRCIERe 🧙‍♀️🪄",
+"MaGE 🧙‍♂️✨"
+],
+"intro": [
+"JE cRois MoURRIr à NouVEaUX 💀😵🕯️",
+"PeNDANT une SoirÉe EfFrayaNTE une EFFROYABLE CatAstrOPhe est ARRivÉ 🎃🔥😱",
+"Ma SOUffraNce eST InfiNI 😩💔🕳️"
+],
+"problème": [
+"CaR VoyeR VOUs, J'ai  PErdu uN Objet féTIChe 😭🔍🪄",
+". JAMAIs N'aUrais-JE pU CROiRe QUe je PerDrait A NouVEaux MoN PreCIEUX OBjet 😱💎💀",
+". Si UN JouR Je SouhaiTe PoUvOIR PasseR VerITABlEmENt Dans L'Haut DeLA 🌫️🕳️🌑"
+],
+"question": [
+"OOOhhOOhOhOHhhuhhh COmMent m'EN SOrTir 😱🤯",
+"jAMaIS Je NE PourrAis M'en SortIR 😫💀",
+"uRrurRrrRhrrurhrr 👁️👁️😨"
+],
+"solution": [
+"RetRouver MoN FetIche 🔍🪄",
+"RaPPorTeR MOI Ma PossEsSion 📦✨",
+"MEttez Fin A mes REGRET 💀⚔️"
+],
+"politesse": [
+"Ou Soyez MauDIT ! 👿🔥",
+"Pour M'ApportER la PaIX 🕊️✨",
+"Si VouS RespeCtÉ Vos ANceStre 🪦🕯️"
+]
+"itemDesc": [
+"Une #item# #indiceI1Extend#, #indiceI2Extend#"
+]
+}
