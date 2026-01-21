@@ -2,18 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bet45gulqsrwk" path="res://scripts/hud.gd" id="1_ftoh2"]
 [ext_resource type="PackedScene" uid="uid://bxb3sh2rsgn4j" path="res://scenes/heart.tscn" id="2_fymyw"]
-[ext_resource type="Texture2D" uid="uid://b05sq5d5ukqij" path="res://sprites/heart.png" id="3_5ysmq"]
+[ext_resource type="Script" uid="uid://c8ij1v4qcspm3" path="res://scripts/quest_timer.gd" id="3_5ysmq"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oo0fn"]
 
-[node name="hud" type="CanvasLayer" node_paths=PackedStringArray("label", "itemLabel", "itemFoundSprite", "itemFoundDesc", "UiDescItems")]
+[node name="hud" type="CanvasLayer" node_paths=PackedStringArray("label", "itemLabel")]
 script = ExtResource("1_ftoh2")
 heart_scene = ExtResource("2_fymyw")
 label = NodePath("ItemToSearchAnchor/QuestClueVBox/ItemDesc1")
 itemLabel = NodePath("QuestClueAnchor/QuestClueVBox/Clue1")
-itemFoundSprite = NodePath("ItemFullCenterContainer/ItemToSearchImage")
-itemFoundDesc = NodePath("ItemDescFullVBoxContainer/ItemFullTitle")
-UiDescItems = [NodePath("ItemFullCenterContainer/ItemToSearchImage"), NodePath("ItemFullCenterContainer/ItemToSearchBackground"), NodePath("ItemDescFullVBoxContainer/ItemFullTitle"), NodePath("ItemDescFullVBoxContainer/ItemFullDesc")]
 
 [node name="LifeContainer" type="HBoxContainer" parent="."]
 anchors_preset = 1
@@ -32,15 +29,15 @@ offset_bottom = 100.0
 
 [node name="QuestClueBackground" type="Sprite2D" parent="QuestClueAnchor"]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(105, 55)
-scale = Vector2(200, 100)
+position = Vector2(105, 66.5)
+scale = Vector2(200, 123)
 texture = SubResource("PlaceholderTexture2D_oo0fn")
 
 [node name="QuestClueVBox" type="VBoxContainer" parent="QuestClueAnchor"]
 layout_mode = 0
-offset_left = 12.0
+offset_left = 13.0
 offset_top = 14.0
-offset_right = 202.0
+offset_right = 203.0
 offset_bottom = 104.0
 
 [node name="ClueText" type="Label" parent="QuestClueAnchor/QuestClueVBox"]
@@ -56,6 +53,17 @@ autowrap_mode = 3
 [node name="Clue2" type="Label" parent="QuestClueAnchor/QuestClueVBox"]
 layout_mode = 2
 text = "Clue2"
+
+[node name="QuestTimerText" type="Label" parent="QuestClueAnchor/QuestClueVBox"]
+layout_mode = 2
+text = "QuestTimerText"
+
+[node name="QuestTimer" type="Timer" parent="QuestClueAnchor/QuestClueVBox" node_paths=PackedStringArray("timer_label", "timer")]
+one_shot = true
+script = ExtResource("3_5ysmq")
+timer_duration = 5.0
+timer_label = NodePath("../QuestTimerText")
+timer = NodePath(".")
 
 [node name="ItemToSearchAnchor" type="Control" parent="."]
 layout_mode = 3
@@ -112,13 +120,12 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ItemToSearchImage" type="Sprite2D" parent="ItemFullCenterContainer"]
-visible = false
-position = Vector2(11, -136)
-scale = Vector2(10.749996, 10.749996)
-texture = ExtResource("3_5ysmq")
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(19, -100)
+scale = Vector2(100, 100)
+texture = SubResource("PlaceholderTexture2D_oo0fn")
 
 [node name="ItemToSearchBackground" type="Sprite2D" parent="ItemFullCenterContainer"]
-visible = false
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(19, 65)
 scale = Vector2(700, 200)
@@ -138,14 +145,12 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ItemFullTitle" type="Label" parent="ItemDescFullVBoxContainer"]
-visible = false
 layout_mode = 2
 text = "Description de l'objet :"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ItemFullDesc" type="Label" parent="ItemDescFullVBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
 text = "Item/Quest Full Desc"
