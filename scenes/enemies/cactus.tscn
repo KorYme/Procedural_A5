@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://cgkd17ay46hn"]
+
+[ext_resource type="Script" uid="uid://b5df80s50tpg6" path="res://scripts/enemy.gd" id="1_lb72t"]
+[ext_resource type="Resource" uid="uid://4wrtqv1kgm5c" path="res://resources/enemy_default_movement.tres" id="2_kasfo"]
+[ext_resource type="Resource" uid="uid://cxk1f1srqi8ot" path="res://resources/enemy_stunned_movement.tres" id="3_0qrrt"]
+[ext_resource type="PackedScene" uid="uid://imvv20oldcd0" path="res://scenes/enemy_attack.tscn" id="4_lgs6g"]
+[ext_resource type="Texture2D" uid="uid://d16glphbdsfp8" path="res://sprites/Tilemap/colored_tilemap.png" id="5_5ddjh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p1d5c"]
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_lb72t")
+attack_distance = 30.0
+default_movement = ExtResource("2_kasfo")
+stunned_movemement = ExtResource("3_0qrrt")
+attack_scene = ExtResource("4_lgs6g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p1d5c")
+
+[node name="BodySprite" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(3, 3)
+texture = ExtResource("5_5ddjh")
+region_enabled = true
+region_rect = Rect2(71.97858, 9.937321, 7.9961624, 7.1212025)
