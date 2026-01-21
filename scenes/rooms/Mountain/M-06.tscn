@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_rreei"]
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_xbh6l"]
 [ext_resource type="PackedScene" uid="uid://cqci20ogtvr2s" path="res://scenes/enemies/crab.tscn" id="3_b0cfk"]
-[ext_resource type="PackedScene" path="res://scenes/enemies/rats.tscn" id="4_navhx"]
+[ext_resource type="PackedScene" uid="uid://csjidcmpwprp1" path="res://scenes/enemies/rats.tscn" id="4_navhx"]
 
 [node name="M06" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_xbh6l")
@@ -68,10 +68,7 @@ position = Vector2(308, -736)
 [node name="Enemy13" parent="." instance=ExtResource("3_b0cfk")]
 position = Vector2(89, -746)
 
-[connection signal="body_entered" from="LayerSpawnItem/ItemCollectible" to="LayerSpawnItem/ItemCollectible" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@48866" to="LayerSpawnItem/@Area2D@48866" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@48867" to="LayerSpawnItem/@Area2D@48867" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@48868" to="LayerSpawnItem/@Area2D@48868" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@48869" to="LayerSpawnItem/@Area2D@48869" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@48870" to="LayerSpawnItem/@Area2D@48870" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@48871" to="LayerSpawnItem/@Area2D@48871" method="_on_body_entered"]
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD5/9//AgAAAAAABAAGAN//AgAAAAAABAATAN//AgAAAAAABAAZAOT/AgAAAAAAAwAMAO//AgAAAAAAAwAMAPr/AgAAAAAAAwAAAPr/AgAAAAAAAgAAAO//AgAAAAAAAgDz/+T/AgAAAAAAAgD5/+n/AgAAAAAAAQATAOn/AgAAAAAAAQAGAP//AgAAAAAAAQA=")
+tile_set = ExtResource("1_rreei")

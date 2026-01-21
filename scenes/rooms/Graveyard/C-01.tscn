@@ -35,4 +35,7 @@ position = Vector2(274, -247)
 [node name="Enemy4" parent="." instance=ExtResource("3_x2b7r")]
 position = Vector2(275, -134)
 
-[connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAGAP//AgAAAAAAAQAAAPr/AgAAAAAAAgAMAPr/AgAAAAAAAwAGAPX/AgAAAAAABAA=")
+tile_set = ExtResource("1_4jxos")
