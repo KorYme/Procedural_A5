@@ -12,7 +12,8 @@ signal door_state_changed(new_value : STATE)
 
 var _room : Room
 
-@onready var door_collision = $"DoorCollision"
+@onready var door_trigger = $"EntryDoorCollision"
+@onready var door_collision = $"MiddleCollisionShape2D"
 @onready var other_door_raycast = $"DoorArea2D"
 
 

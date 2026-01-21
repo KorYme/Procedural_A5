@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b3e4ce3ykd01c"]
 
-[ext_resource type="Script" uid="uid://cqdxgioetciqb" path="res://scripts/door.gd" id="1_c643i"]
-[ext_resource type="Texture2D" uid="uid://d16glphbdsfp8" path="res://sprites/Tilemap/colored_tilemap.png" id="2_ogr6x"]
+[ext_resource type="Script" uid="uid://cqdxgioetciqb" path="res://scripts/door.gd" id="1_7ueeh"]
+[ext_resource type="Texture2D" uid="uid://d16glphbdsfp8" path="res://sprites/Tilemap/colored_tilemap.png" id="2_ipq63"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qk64d"]
 size = Vector2(8, 8)
@@ -11,8 +11,8 @@ size = Vector2(32, 32)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qk64d"]
 
-[node name="Door" type="StaticBody2D" node_paths=PackedStringArray("closedNode", "openNode")]
-script = ExtResource("1_c643i")
+[node name="HorizontalDoor" type="StaticBody2D" node_paths=PackedStringArray("closedNode", "openNode")]
+script = ExtResource("1_7ueeh")
 closedNode = NodePath("ClosedWall")
 openNode = NodePath("OpenWall")
 
@@ -20,31 +20,31 @@ openNode = NodePath("OpenWall")
 position = Vector2(-8, 0)
 shape = SubResource("RectangleShape2D_qk64d")
 
-[node name="RightCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, 0)
-shape = SubResource("RectangleShape2D_qk64d")
-
 [node name="MiddleCollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.25, 0.25)
 shape = SubResource("RectangleShape2D_j3msj")
+
+[node name="RightCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 0)
+shape = SubResource("RectangleShape2D_qk64d")
 
 [node name="ClosedWall" type="Node2D" parent="."]
 visible = false
 
 [node name="Wall" type="Sprite2D" parent="ClosedWall"]
 position = Vector2(-8, 0)
-texture = ExtResource("2_ogr6x")
+texture = ExtResource("2_ipq63")
 region_enabled = true
 region_rect = Rect2(9, 0, 8, 8)
 
 [node name="Wall2" type="Sprite2D" parent="ClosedWall"]
-texture = ExtResource("2_ogr6x")
+texture = ExtResource("2_ipq63")
 region_enabled = true
 region_rect = Rect2(9, 0, 8, 8)
 
 [node name="Wall3" type="Sprite2D" parent="ClosedWall"]
 position = Vector2(8, 0)
-texture = ExtResource("2_ogr6x")
+texture = ExtResource("2_ipq63")
 region_enabled = true
 region_rect = Rect2(9, 0, 8, 8)
 
@@ -52,25 +52,25 @@ region_rect = Rect2(9, 0, 8, 8)
 
 [node name="Open" type="Sprite2D" parent="OpenWall"]
 position = Vector2(-8, 0)
-texture = ExtResource("2_ogr6x")
+texture = ExtResource("2_ipq63")
 region_enabled = true
 region_rect = Rect2(27, 18, 8, 8)
 
 [node name="Open2" type="Sprite2D" parent="OpenWall"]
-texture = ExtResource("2_ogr6x")
+texture = ExtResource("2_ipq63")
 region_enabled = true
 region_rect = Rect2(9, 9, 8, 8)
 
 [node name="Open3" type="Sprite2D" parent="OpenWall"]
 position = Vector2(8, 0)
-texture = ExtResource("2_ogr6x")
+texture = ExtResource("2_ipq63")
 region_enabled = true
 region_rect = Rect2(0, 18, 8, 8)
 
-[node name="DoorCollision" type="Area2D" parent="."]
+[node name="EntryDoorCollision" type="Area2D" parent="."]
 scale = Vector2(0.25, 0.25)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorCollision"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntryDoorCollision"]
 shape = SubResource("RectangleShape2D_j3msj")
 
 [node name="DoorArea2D" type="Area2D" parent="."]
@@ -80,4 +80,4 @@ collision_mask = 256
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea2D"]
 shape = SubResource("CircleShape2D_qk64d")
 
-[connection signal="body_entered" from="DoorCollision" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="EntryDoorCollision" to="." method="_on_area_2d_body_entered"]
