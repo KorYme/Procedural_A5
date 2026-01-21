@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_7a4t8"]
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_ro3km"]
-[ext_resource type="PackedScene" path="res://scenes/enemies/araigne.tscn" id="3_1ea26"]
+[ext_resource type="PackedScene" uid="uid://cxqae3axxoke8" path="res://scenes/enemies/araigne.tscn" id="3_1ea26"]
 [ext_resource type="PackedScene" uid="uid://dlj22xywjuj5f" path="res://scenes/enemies/serpent.tscn" id="4_vc7un"]
 
 [node name="F03" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
@@ -77,5 +77,7 @@ position = Vector2(455, -146)
 [node name="Enemy16" parent="." instance=ExtResource("4_vc7un")]
 position = Vector2(55, -176)
 
-[connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]
-[connection signal="body_entered" from="ItemSpawnLayer/@Area2D@86740" to="ItemSpawnLayer/@Area2D@86740" method="_on_body_entered"]
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAGAP//AgAAAAAABQATAP//AgAAAAAABQAAAPr/AgAAAAAABgANAO//AgAAAAAABgAZAPr/AgAAAAAABwAZAO//AgAAAAAABwAGAPX/AgAAAAAACAATAOr/AgAAAAAACAA=")
+tile_set = ExtResource("1_ro3km")

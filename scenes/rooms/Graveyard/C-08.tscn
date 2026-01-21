@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_6d6et"]
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_am3hw"]
 [ext_resource type="PackedScene" uid="uid://b0ahenmxn2ain" path="res://scenes/enemies/enemy.tscn" id="3_aaw8u"]
-[ext_resource type="PackedScene" path="res://scenes/enemies/beholder.tscn" id="4_8f1fy"]
-[ext_resource type="PackedScene" path="res://scenes/enemies/rats.tscn" id="5_oeejk"]
+[ext_resource type="PackedScene" uid="uid://dw5bwmgog7lhf" path="res://scenes/enemies/beholder.tscn" id="4_8f1fy"]
+[ext_resource type="PackedScene" uid="uid://csjidcmpwprp1" path="res://scenes/enemies/rats.tscn" id="5_oeejk"]
 
 [node name="C08" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_6d6et")
@@ -62,5 +62,10 @@ position = Vector2(204, -831)
 
 [node name="Enemy11" parent="." instance=ExtResource("3_aaw8u")]
 position = Vector2(207, -747)
+
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAATAOr/AgAAAAAABAAGAN//AgAAAAAABAD5/+r/AgAAAAAABADz/+//AgAAAAAAAgAAAOT/AgAAAAAAAgAAAPr/AgAAAAAAAgAGAP//AgAAAAAAAQATAPT/AgAAAAAAAQD5//T/AgAAAAAAAQAZAO//AgAAAAAAAwAMAPr/AgAAAAAAAwAMAOT/AgAAAAAAAwA=")
+tile_set = ExtResource("1_am3hw")
 
 [connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]

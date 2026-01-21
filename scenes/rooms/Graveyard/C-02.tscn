@@ -55,6 +55,7 @@ position = Vector2(522, -227)
 [node name="Enemy10" parent="." instance=ExtResource("5_vogae")]
 position = Vector2(292, -451)
 
-[connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]
-[connection signal="body_entered" from="ItemSpawnLayer/@Area2D@63389" to="ItemSpawnLayer/@Area2D@63389" method="_on_body_entered"]
-[connection signal="body_entered" from="ItemSpawnLayer/@Area2D@63390" to="ItemSpawnLayer/@Area2D@63390" method="_on_body_entered"]
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAGAOr/AgAAAAAABAATAPX/AgAAAAAABAAMAO//AgAAAAAAAwAZAPr/AgAAAAAAAwAAAPr/AgAAAAAAAgAAAO//AgAAAAAAAgAGAP//AgAAAAAAAQATAP//AgAAAAAAAQA=")
+tile_set = ExtResource("1_phi0k")

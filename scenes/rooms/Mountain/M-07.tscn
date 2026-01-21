@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_f04wf"]
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_g4xmv"]
-[ext_resource type="PackedScene" path="res://scenes/enemies/rats.tscn" id="3_u3ghm"]
+[ext_resource type="PackedScene" uid="uid://csjidcmpwprp1" path="res://scenes/enemies/rats.tscn" id="3_u3ghm"]
 [ext_resource type="PackedScene" uid="uid://b0ahenmxn2ain" path="res://scenes/enemies/enemy.tscn" id="4_c5nlu"]
 
 [node name="M07" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
@@ -42,14 +42,7 @@ position = Vector2(622, -305)
 [node name="Enemy6" parent="." instance=ExtResource("4_c5nlu")]
 position = Vector2(622, -657)
 
-[connection signal="body_entered" from="LayerSpawnItem/ItemCollectible" to="LayerSpawnItem/ItemCollectible" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@55512" to="LayerSpawnItem/@Area2D@55512" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@55513" to="LayerSpawnItem/@Area2D@55513" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@55514" to="LayerSpawnItem/@Area2D@55514" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@55515" to="LayerSpawnItem/@Area2D@55515" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@55516" to="LayerSpawnItem/@Area2D@55516" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@55517" to="LayerSpawnItem/@Area2D@55517" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@55518" to="LayerSpawnItem/@Area2D@55518" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@55519" to="LayerSpawnItem/@Area2D@55519" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@55520" to="LayerSpawnItem/@Area2D@55520" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@55521" to="LayerSpawnItem/@Area2D@55521" method="_on_body_entered"]
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAATAP//AgAAAAAAAQAgAP//AgAAAAAAAQAGAP//AgAAAAAAAQAAAPr/AgAAAAAAAgANAO//AgAAAAAAAgANAOT/AgAAAAAAAgAZAO//AgAAAAAAAwAmAPr/AgAAAAAAAwAZAOT/AgAAAAAAAwATAN//AgAAAAAABAAgAPX/AgAAAAAABAAGAPX/AgAAAAAABAA=")
+tile_set = ExtResource("1_f04wf")
