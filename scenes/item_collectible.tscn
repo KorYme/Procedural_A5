@@ -1,9 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsv48c60vqne2"]
+[gd_scene load_steps=4 format=3 uid="uid://dsv48c60vqne2"]
 
-[ext_resource type="Script" uid="uid://d0ufgduhrp8q1" path="res://scenes/item_collectible.gd" id="1_a1h84"]
-[ext_resource type="PackedScene" uid="uid://dov4nkfsf27hs" path="res://scenes/heart_collectible.tscn" id="2_af527"]
+[ext_resource type="Script" uid="uid://d0ufgduhrp8q1" path="res://scripts/item_collectible.gd" id="1_a1h84"]
+[ext_resource type="Texture2D" uid="uid://b8c6ax537qh4l" path="res://sprites/image-removebg-preview.png" id="2_a1h84"]
 
-[node name="ItemCollectible" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxpyt"]
+
+[node name="ItemCollectible" type="Area2D" node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_a1h84")
+sprite = NodePath("Sprite2D")
 
-[node name="HeartCollectible" parent="." instance=ExtResource("2_af527")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qxpyt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, -9.53674e-07)
+scale = Vector2(0.05144694, 0.051446974)
+texture = ExtResource("2_a1h84")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
