@@ -36,3 +36,7 @@ func _remove_heart() -> void:
 
 	var heart =	life_container.get_child(0)
 	life_container.remove_child(heart)
+	
+func on_collect_data(data: ItemData) -> void:
+	print("youpi")
+	pass

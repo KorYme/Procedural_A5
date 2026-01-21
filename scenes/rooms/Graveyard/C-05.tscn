@@ -21,3 +21,7 @@ tile_set = ExtResource("1_kftr1")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAGAPr/AAAJAAYAAAAGAPn/AAAJAAcAAAAFAPv/AAADAAoAAAAGAPv/AAAEAAoAAAAHAPv/AAADAAoAAAAHAPr/AAAEAAoAAAAFAPr/AAAEAAoAAAAFAPn/AAAGAAQAAAAHAPn/AAAFAAoAAAA=")
 tile_set = ExtResource("1_kftr1")
+
+[node name="ItemSpawnLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_set = ExtResource("1_kftr1")
