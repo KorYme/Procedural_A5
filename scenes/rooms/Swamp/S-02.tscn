@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=4 uid="uid://c1svca1bdv0"]
+[gd_scene load_steps=7 format=4 uid="uid://c1svca1bdv0"]
 
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_6fg77"]
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_tlo6q"]
+[ext_resource type="PackedScene" uid="uid://c0hb0lhv6itvo" path="res://scenes/enemies/zombie.tscn" id="4_lg5q3"]
+[ext_resource type="PackedScene" uid="uid://cgkd17ay46hn" path="res://scenes/enemies/cactus.tscn" id="5_eyjmd"]
+[ext_resource type="PackedScene" uid="uid://dw5bwmgog7lhf" path="res://scenes/enemies/beholder.tscn" id="6_uykkt"]
+[ext_resource type="PackedScene" uid="uid://dlj22xywjuj5f" path="res://scenes/enemies/serpent.tscn" id="7_i6nfo"]
 
 [node name="S02" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_tlo6q")
@@ -32,5 +36,35 @@ scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAGAOr/AgAAAAAADAATAPX/AgAAAAAADAAZAPr/AgAAAAAACwAMAO//AgAAAAAACwAAAO//AgAAAAAACgAAAPr/AgAAAAAACgAGAP//AgAAAAAACQATAP//AgAAAAAACQA=")
 tile_set = ExtResource("1_6fg77")
 
+[node name="Enemy" parent="." instance=ExtResource("4_lg5q3")]
+position = Vector2(108, -485)
+
+[node name="Enemy2" parent="." instance=ExtResource("6_uykkt")]
+position = Vector2(261, -563)
+
+[node name="Enemy3" parent="." instance=ExtResource("7_i6nfo")]
+position = Vector2(81, -265)
+
+[node name="Enemy4" parent="." instance=ExtResource("6_uykkt")]
+position = Vector2(388, -272)
+
+[node name="Enemy5" parent="." instance=ExtResource("4_lg5q3")]
+position = Vector2(334, -113)
+
+[node name="Enemy6" parent="." instance=ExtResource("6_uykkt")]
+position = Vector2(625, -81)
+
+[node name="Enemy7" parent="." instance=ExtResource("7_i6nfo")]
+position = Vector2(646, -277)
+
+[node name="Enemy8" parent="." instance=ExtResource("5_eyjmd")]
+position = Vector2(719, -166)
+
+[node name="Enemy9" parent="." instance=ExtResource("5_eyjmd")]
+position = Vector2(160, -543)
+
+[node name="Enemy10" parent="." instance=ExtResource("5_eyjmd")]
+position = Vector2(322, -349)
+
 [connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]
-[connection signal="body_entered" from="ItemSpawnLayer/@Area2D@103965" to="ItemSpawnLayer/@Area2D@103965" method="_on_body_entered"]
+[connection signal="body_entered" from="ItemSpawnLayer/@Area2D@156609" to="ItemSpawnLayer/@Area2D@156609" method="_on_body_entered"]
