@@ -24,4 +24,5 @@ tile_set = ExtResource("1_rif6s")
 
 [node name="ItemSpawnLayer" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAMAPz/AQAAAAAAAgA=")
 tile_set = ExtResource("1_rif6s")
