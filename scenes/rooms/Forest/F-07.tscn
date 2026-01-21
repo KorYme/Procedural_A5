@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=4 uid="uid://cehm4avqrqe0l"]
+[gd_scene load_steps=5 format=4 uid="uid://cehm4avqrqe0l"]
 
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_lbbpn"]
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_sinbq"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/araigne.tscn" id="3_4i277"]
+[ext_resource type="PackedScene" uid="uid://dlj22xywjuj5f" path="res://scenes/enemies/serpent.tscn" id="4_dno3b"]
 
 [node name="F07" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_lbbpn")
@@ -26,3 +28,66 @@ tile_set = ExtResource("1_sinbq")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAbAP7/AQAAAAAAAgAPAOH/AQAAAAAAAgA=")
 tile_set = ExtResource("1_sinbq")
+
+[node name="Enemy" parent="." instance=ExtResource("3_4i277")]
+position = Vector2(36, -194)
+
+[node name="Enemy2" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(116, -222)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(224, -320)
+
+[node name="Enemy4" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(167, -146)
+
+[node name="Enemy5" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(206, -55)
+
+[node name="Enemy6" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(447, -211)
+
+[node name="Enemy7" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(629, -37)
+
+[node name="Enemy8" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(834, -148)
+
+[node name="Enemy9" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(1041, -57)
+
+[node name="Enemy10" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(946, -199)
+
+[node name="Enemy11" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(1194, -167)
+
+[node name="Enemy12" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(515, -449)
+
+[node name="Enemy13" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(716, -450)
+
+[node name="Enemy14" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(724, -553)
+
+[node name="Enemy15" parent="." instance=ExtResource("3_4i277")]
+position = Vector2(779, -530)
+
+[node name="Enemy16" parent="." instance=ExtResource("3_4i277")]
+position = Vector2(565, -618)
+
+[node name="Enemy17" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(457, -882)
+
+[node name="Enemy18" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(756, -879)
+
+[node name="Enemy19" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(620, -897)
+
+[node name="Enemy20" parent="." instance=ExtResource("4_dno3b")]
+position = Vector2(643, -1030)
+
+[connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]
+[connection signal="body_entered" from="ItemSpawnLayer/@Area2D@117854" to="ItemSpawnLayer/@Area2D@117854" method="_on_body_entered"]

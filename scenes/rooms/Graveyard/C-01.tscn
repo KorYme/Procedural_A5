@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://dh5b6jjc2fqyt"]
+[gd_scene load_steps=4 format=4 uid="uid://dh5b6jjc2fqyt"]
 
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_4jxos"]
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_wy8ar"]
+[ext_resource type="PackedScene" uid="uid://0dq41qg2cp84" path="res://scenes/enemies/zombie.tscn" id="3_x2b7r"]
 
 [node name="C01" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_wy8ar")
@@ -21,3 +22,17 @@ tile_set = ExtResource("1_4jxos")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAGAPz/AQAAAAAAAgA=")
 tile_set = ExtResource("1_4jxos")
+
+[node name="Enemy" parent="." instance=ExtResource("3_x2b7r")]
+position = Vector2(135, -112)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_x2b7r")]
+position = Vector2(142, -239)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_x2b7r")]
+position = Vector2(274, -247)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_x2b7r")]
+position = Vector2(275, -134)
+
+[connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]

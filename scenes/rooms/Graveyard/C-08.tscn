@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=4 uid="uid://cqr2fx78f5bdk"]
+[gd_scene load_steps=6 format=4 uid="uid://cqr2fx78f5bdk"]
 
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_6d6et"]
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_am3hw"]
+[ext_resource type="PackedScene" uid="uid://b0ahenmxn2ain" path="res://scenes/enemies/enemy.tscn" id="3_aaw8u"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/beholder.tscn" id="4_8f1fy"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/rats.tscn" id="5_oeejk"]
 
 [node name="C08" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_6d6et")
@@ -26,3 +29,38 @@ tile_set = ExtResource("1_am3hw")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAGAO//AQAAAAAAAgA=")
 tile_set = ExtResource("1_am3hw")
+
+[node name="Enemy" parent="." instance=ExtResource("3_aaw8u")]
+position = Vector2(616, -529)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_aaw8u")]
+position = Vector2(-216, -528)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_aaw8u")]
+position = Vector2(200, -643)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_aaw8u")]
+position = Vector2(209, -412)
+
+[node name="Enemy5" parent="." instance=ExtResource("3_aaw8u")]
+position = Vector2(128, -531)
+
+[node name="Enemy6" parent="." instance=ExtResource("3_aaw8u")]
+position = Vector2(285, -528)
+
+[node name="Enemy7" parent="." instance=ExtResource("4_8f1fy")]
+position = Vector2(253, -182)
+
+[node name="Enemy8" parent="." instance=ExtResource("5_oeejk")]
+position = Vector2(184, -185)
+
+[node name="Enemy9" parent="." instance=ExtResource("5_oeejk")]
+position = Vector2(203, -140)
+
+[node name="Enemy10" parent="." instance=ExtResource("3_aaw8u")]
+position = Vector2(204, -831)
+
+[node name="Enemy11" parent="." instance=ExtResource("3_aaw8u")]
+position = Vector2(207, -747)
+
+[connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]
