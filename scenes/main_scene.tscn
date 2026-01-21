@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://db5cfan2a3vjb"]
+[gd_scene load_steps=8 format=3 uid="uid://db5cfan2a3vjb"]
 
-[ext_resource type="Script" uid="uid://cnpp5l1cqyjbc" path="res://scripts/dungeon_generator.gd" id="1_gubc5"]
+[ext_resource type="Script" path="res://scripts/dungeon_generator.gd" id="1_gubc5"]
 [ext_resource type="PackedScene" uid="uid://bib07te5reau7" path="res://scenes/player.tscn" id="1_qspk8"]
 [ext_resource type="Script" uid="uid://4eq20em80d1w" path="res://scripts/camera_follow.gd" id="2_liovv"]
 [ext_resource type="Resource" uid="uid://cfw2u1fdhsshj" path="res://resources/rooms.tres" id="2_rt2n2"]
+[ext_resource type="PackedScene" uid="uid://c2mpvc0vrkfn0" path="res://scenes/item_generator.tscn" id="7_c16ls"]
 [ext_resource type="PackedScene" uid="uid://b20085rng87fk" path="res://scenes/hud.tscn" id="7_i43eg"]
 [ext_resource type="Script" uid="uid://ctfjr4q8b6iq4" path="res://scripts/quest_creator.gd" id="8_18nlu"]
 
@@ -20,10 +21,14 @@ position = Vector2(97, -80)
 [node name="hud" parent="." instance=ExtResource("7_i43eg")]
 visible = false
 
-[node name="QuestCreator" type="Node" parent="." node_paths=PackedStringArray("hud")]
+[node name="QuestCreator" type="Node" parent="." node_paths=PackedStringArray("hud", "itemGenerator")]
 script = ExtResource("8_18nlu")
 hud = NodePath("../hud")
+itemGenerator = NodePath("../ItemGenerator")
 
 [node name="Dungeon" type="Node2D" parent="."]
 script = ExtResource("1_gubc5")
 room_data = ExtResource("2_rt2n2")
+
+[node name="ItemGenerator" parent="." instance=ExtResource("7_c16ls")]
+percentageOfRoomsWithItem = null

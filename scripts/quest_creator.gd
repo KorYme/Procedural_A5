@@ -1,6 +1,7 @@
 class_name QuestCreator extends Node
 
 @export var hud : Hud
+@export var itemGenerator : ItemGenerator
 
 var questDialogue : String
 var itemDesc : String
@@ -48,12 +49,10 @@ func CreateQuest():
 	grammar._save_data["indiceI1"], grammar._save_data["indiceI2"])
 
 	currentQuest = Quest.new(currentQuestItem, sentenceAray[1], sentenceAray[0])
-	itemsBatch = ItemGenerator.GenerateItemBatch(currentQuestItem, 5)
-	print(sentence)
 	
-	var test = get_tree().get_nodes_in_group("Items")
-	for i in test:
-		print(i.name)
+	itemGenerator.DispatchItems(currentQuestItem)
+	print("caca")
+	 
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dialogue"):
