@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=4 uid="uid://c3jv3tewyna7e"]
+[gd_scene load_steps=3 format=4 uid="uid://c3jv3tewyna7e"]
 
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_14kl6"]
+[ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_ibv4m"]
 
-[node name="C04" type="Node2D"]
+[node name="C04" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
+script = ExtResource("1_ibv4m")
+tilemap_layers = [NodePath("DungeonLayer"), NodePath("ObstacleLayer")]
 
 [node name="DungeonLayer" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
