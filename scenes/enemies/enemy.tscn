@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://imvv20oldcd0" path="res://scenes/enemy_attack.tscn" id="2_mf8py"]
 [ext_resource type="Resource" uid="uid://4wrtqv1kgm5c" path="res://resources/enemy_default_movement.tres" id="2_nnsly"]
 [ext_resource type="Resource" uid="uid://cxk1f1srqi8ot" path="res://resources/enemy_stunned_movement.tres" id="3_vw1dg"]
-[ext_resource type="Texture2D" uid="uid://cxg0ijjq68r28" path="res://sprites/Tiles/Colored/tile_0004.png" id="5_c4w8v"]
+[ext_resource type="Texture2D" uid="uid://d16glphbdsfp8" path="res://sprites/Tilemap/colored_tilemap.png" id="5_c4w8v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p1d5c"]
 
@@ -17,7 +17,6 @@ attack_distance = 30.0
 default_movement = ExtResource("2_nnsly")
 stunned_movemement = ExtResource("3_vw1dg")
 attack_scene = ExtResource("2_mf8py")
-attack_spawn_point = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_p1d5c")
@@ -26,3 +25,5 @@ shape = SubResource("CircleShape2D_p1d5c")
 z_index = 2
 scale = Vector2(3, 3)
 texture = ExtResource("5_c4w8v")
+region_enabled = true
+region_rect = Rect2(89.95592, 0, 8.054596, 8.586205)
