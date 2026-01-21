@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://0dq41qg2cp84"]
+[gd_scene load_steps=7 format=3 uid="uid://c0hb0lhv6itvo"]
 
 [ext_resource type="Script" uid="uid://b5df80s50tpg6" path="res://scripts/enemy.gd" id="1_bgxja"]
 [ext_resource type="Resource" uid="uid://4wrtqv1kgm5c" path="res://resources/enemy_default_movement.tres" id="2_irn3l"]
@@ -14,6 +14,7 @@ motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_bgxja")
 attack_distance = 30.0
+life = 1
 default_movement = ExtResource("2_irn3l")
 stunned_movemement = ExtResource("3_p4ex4")
 attack_scene = ExtResource("4_7s1wu")
