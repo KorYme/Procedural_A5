@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj46csigdrryf"]
+
+[ext_resource type="Script" uid="uid://bmj11dejci1mc" path="res://scripts/game_over_menu.gd" id="1_6ebp1"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6ebp1"]
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_6ebp1")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemToSearchBackground" type="Sprite2D" parent="CenterContainer"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+scale = Vector2(1200, 116.00001)
+texture = SubResource("PlaceholderTexture2D_6ebp1")
+
+[node name="DeadContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -11.5
+offset_right = 63.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DeadText" type="Label" parent="DeadContainer"]
+layout_mode = 2
+text = "Vous êtes mort !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RespawnButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = 76.0
+offset_right = 75.00049
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Restart"
