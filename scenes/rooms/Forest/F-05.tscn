@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=4 uid="uid://pqqkr15m7esn"]
+[gd_scene load_steps=5 format=4 uid="uid://pqqkr15m7esn"]
 
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_50w6s"]
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_gi37q"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/araigne.tscn" id="3_wixgk"]
+[ext_resource type="PackedScene" uid="uid://dlj22xywjuj5f" path="res://scenes/enemies/serpent.tscn" id="4_jc7lr"]
 
 [node name="F05" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_50w6s")
@@ -25,3 +27,21 @@ tile_set = ExtResource("1_gi37q")
 [node name="ItemSpawnLayer" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
 tile_set = ExtResource("1_gi37q")
+
+[node name="Enemy" parent="." instance=ExtResource("3_wixgk")]
+position = Vector2(33, -168)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_wixgk")]
+position = Vector2(87, -92)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_jc7lr")]
+position = Vector2(197, -33)
+
+[node name="Enemy4" parent="." instance=ExtResource("4_jc7lr")]
+position = Vector2(208, -327)
+
+[node name="Enemy5" parent="." instance=ExtResource("4_jc7lr")]
+position = Vector2(302, -271)
+
+[node name="Enemy6" parent="." instance=ExtResource("3_wixgk")]
+position = Vector2(379, -177)
