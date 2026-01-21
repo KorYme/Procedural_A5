@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxpyt"]
 
-[node name="ItemCollectible" type="Area2D" node_paths=PackedStringArray("sprite")]
+[node name="ItemCollectible" type="Area2D" node_paths=PackedStringArray("sprite") groups=["Items"]]
 script = ExtResource("1_a1h84")
 sprite = NodePath("Sprite2D")
 

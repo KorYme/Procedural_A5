@@ -12,6 +12,7 @@ static func GenerateItemBatch(bannedItem: ItemData, itemCount: int) -> Array[Ite
 	grammar.rng = rng
 	grammar.add_modifiers(Tracery.UniversalModifiers.get_modifiers())
 		
+	print(grammar.flatten("#origin#"))
 	
 	var item : ItemData = null
 	
