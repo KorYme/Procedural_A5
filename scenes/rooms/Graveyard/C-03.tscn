@@ -21,5 +21,3 @@ tile_set = ExtResource("1_4m6iw")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAANAPr/AQAAAAAAAgA=")
 tile_set = ExtResource("1_4m6iw")
-
-[connection signal="body_entered" from="ItemSpawnLayer/@Area2D@88099" to="ItemSpawnLayer/@Area2D@88099" method="_on_body_entered"]
