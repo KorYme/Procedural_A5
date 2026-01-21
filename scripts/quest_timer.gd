@@ -12,7 +12,7 @@ func _ready() -> void:
 	add_child(timer)
 	timer.start()
 	
-func _process(_delta):
+func _process(_delta) -> void:
 	if timer.time_left > 0:
 		timer_label.text = "Time: %.1f" % timer.time_left
 	
