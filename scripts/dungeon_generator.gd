@@ -6,7 +6,7 @@ var directions : Array[Vector2i] = [Vector2i( 1, 0 ), Vector2i( -1, 0 ),
 Vector2i( 0, 1 ), Vector2i( 0, -1 )]
 
 func _ready() -> void:
-	generate_dungeons()
+	#generate_dungeons()
 	pass
 
 func generate_dungeons(size : int = 5, biome : RoomData.RoomBiome = RoomData.RoomBiome.Cemetary) -> void:
@@ -63,12 +63,12 @@ func generate_dungeons(size : int = 5, biome : RoomData.RoomBiome = RoomData.Roo
 				instance.position.x = (x - size / 2) * room_data.RoomSize.x
 				instance.position.y = -y * room_data.RoomSize.y
 				add_child(instance)
-				#TMP
-				if is_first_room:
-					if instance is Room:
-						Player.Instance.enter_room(instance)
-					else:
-						print(instance.name)
+				##TMP
+				#if is_first_room:
+					#if instance is Room:
+						#Player.Instance.enter_room(instance)
+					#else:
+						#print(instance.name)
 				
 	for room in Room.all_rooms:
 		for door in room.doors:

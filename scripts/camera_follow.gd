@@ -7,12 +7,6 @@ var _bounds : Rect2 = Rect2(Vector2.ZERO, Vector2.INF)
 var _target_position : Vector2 = Vector2.ZERO
 var _target : Node2D = null
 
-static var Instance : CameraFollow
-
-func _init() -> void:
-	Instance = self
-
-
 func _ready() -> void:
 	position = _target_position
 	_target = Player.Instance
@@ -39,6 +33,7 @@ func snap_to_target() -> void:
 func refresh_target_position() -> void:
 	if _target == null:
 		return
+	var test = _target.pos
 	_target_position = keep_in_bounds(_target.position)
 
 
