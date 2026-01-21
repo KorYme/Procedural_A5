@@ -21,3 +21,16 @@ tile_set = ExtResource("1_rreei")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAATAOT/AAALAAYAAAANAOP/AAADAAMAAAALAOP/AAABAAAAAAAKAOP/AAABAAAAAAAJAOP/AAACAAQAAAAIAOP/AAABAAAAAAAHAOP/AAADAAQAAAAGAOP/AAABAAAAAAAFAOP/AAABAAAAAAAEAOP/AAACAAQAAAADAOP/AAABAAAAAAACAOP/AAABAAAAAAABAOP/AAACAAQAAAAAAOP/AAABAAAAAAAMAOP/AAAAAAMAAAD//+P/AAABAAMAAAAFAOn/AAABAAMAAAAHAOn/AAAAAAMAAAAMAOT/AAAMAAcAAAALAOT/AAAMAAcAAAAKAOT/AAAMAAcAAAAJAOT/AAAMAAcAAAAIAOT/AAAMAAcAAAAHAOT/AAAMAAcAAAAGAOT/AAAMAAcAAAAFAOT/AAAMAAcAAAAEAOT/AAAMAAcAAAADAOT/AAAMAAcAAAACAOT/AAAMAAcAAAABAOT/AAAMAAcAAAAAAOT/AAAMAAcAAAD//+T/AAAMAAcAAAAHAOr/AAAMAAcAAAAGAOr/AAAMAAcAAAAFAOr/AAAMAAcAAAANAOT/AAADAAEAABA=")
 tile_set = ExtResource("1_rreei")
+
+[node name="LayerSpawnItem" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD8/+T/AQAAAAAAAgAPAOT/AQAAAAAAAgAKAOv/AQAAAAAAAgACAOv/AQAAAAAAAgAGAOf/AQAAAAAAAgAGAPn/AQAAAAAAAgAGAPL/AQAAAAAAAgA=")
+tile_set = ExtResource("1_rreei")
+
+[connection signal="body_entered" from="LayerSpawnItem/ItemCollectible" to="LayerSpawnItem/ItemCollectible" method="_on_body_entered"]
+[connection signal="body_entered" from="LayerSpawnItem/@Area2D@69376" to="LayerSpawnItem/@Area2D@69376" method="_on_body_entered"]
+[connection signal="body_entered" from="LayerSpawnItem/@Area2D@69377" to="LayerSpawnItem/@Area2D@69377" method="_on_body_entered"]
+[connection signal="body_entered" from="LayerSpawnItem/@Area2D@69378" to="LayerSpawnItem/@Area2D@69378" method="_on_body_entered"]
+[connection signal="body_entered" from="LayerSpawnItem/@Area2D@69379" to="LayerSpawnItem/@Area2D@69379" method="_on_body_entered"]
+[connection signal="body_entered" from="LayerSpawnItem/@Area2D@69380" to="LayerSpawnItem/@Area2D@69380" method="_on_body_entered"]
+[connection signal="body_entered" from="LayerSpawnItem/@Area2D@69381" to="LayerSpawnItem/@Area2D@69381" method="_on_body_entered"]
