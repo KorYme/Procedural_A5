@@ -11,6 +11,8 @@ var doors : Array[Door]
 
 func _ready() -> void:
 	all_rooms.push_back(self)
+	if all_rooms.size() == 1:
+		Player.Instance.enter_room(self)
 
 
 func get_local_bounds() -> Rect2:
@@ -40,8 +42,6 @@ func contains(point : Vector2) -> bool:
 
 func on_enter_room(from : Room) -> void:
 	var camera_bounds = get_world_bounds()
-	CameraFollow.Instance.set_bounds(camera_bounds)
-
 
 #func get_adjacent_room(orientation : Utils.ORIENTATION, from : Vector2) -> Room:
 	#var dir : Vector2i = Utils.OrientationToDir(orientation)

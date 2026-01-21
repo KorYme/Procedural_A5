@@ -109,14 +109,14 @@ grow_vertical = 2
 
 [node name="ItemToSearchImage" type="Sprite2D" parent="ItemFullCenterContainer"]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(19, -36)
+position = Vector2(19, -100)
 scale = Vector2(100, 100)
 texture = SubResource("PlaceholderTexture2D_oo0fn")
 
 [node name="ItemToSearchBackground" type="Sprite2D" parent="ItemFullCenterContainer"]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(19, 89)
-scale = Vector2(500, 125)
+position = Vector2(19, 65)
+scale = Vector2(700, 200)
 texture = SubResource("PlaceholderTexture2D_oo0fn")
 
 [node name="ItemDescFullVBoxContainer" type="VBoxContainer" parent="."]
@@ -125,10 +125,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -246.0
-offset_top = 7.779999
-offset_right = 246.0
-offset_bottom = 149.0
+offset_left = -345.0
+offset_top = -46.204987
+offset_right = 344.0
+offset_bottom = 139.35007
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -141,7 +141,7 @@ vertical_alignment = 1
 [node name="ItemFullDesc" type="Label" parent="ItemDescFullVBoxContainer"]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
-text = "ItemFullDesc"
+text = "Item/Quest Full Desc"
 horizontal_alignment = 1
 vertical_alignment = 3
 autowrap_mode = 3

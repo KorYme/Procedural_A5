@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=4 uid="uid://c8ukdd124yfyl"]
+[gd_scene load_steps=5 format=4 uid="uid://c8ukdd124yfyl"]
 
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_lj12l"]
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_pgcuu"]
+[ext_resource type="PackedScene" uid="uid://csjidcmpwprp1" path="res://scenes/enemies/rats.tscn" id="3_4kv6k"]
+[ext_resource type="PackedScene" uid="uid://cqci20ogtvr2s" path="res://scenes/enemies/crab.tscn" id="4_5et3n"]
 
 [node name="M04" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_pgcuu")
@@ -20,4 +22,21 @@ tile_set = ExtResource("1_lj12l")
 [node name="ItemSpawnLayer" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAMAPr/AQAAAAAAAgA=")
+tile_set = ExtResource("1_lj12l")
+
+[node name="Enemy" parent="." instance=ExtResource("3_4kv6k")]
+position = Vector2(776, -297)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_4kv6k")]
+position = Vector2(52, -56)
+
+[node name="Enemy4" parent="." instance=ExtResource("4_5et3n")]
+position = Vector2(458, -140)
+
+[node name="Enemy5" parent="." instance=ExtResource("4_5et3n")]
+position = Vector2(384, -235)
+
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAATAPX/AgAAAAAABAAGAPX/AgAAAAAABAAZAPr/AgAAAAAAAwAAAPr/AgAAAAAAAgAGAP//AgAAAAAAAQATAP//AgAAAAAAAQA=")
 tile_set = ExtResource("1_lj12l")

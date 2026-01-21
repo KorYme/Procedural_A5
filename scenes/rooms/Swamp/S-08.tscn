@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=4 uid="uid://qlobrugeki70"]
+[gd_scene load_steps=6 format=4 uid="uid://qlobrugeki70"]
 
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_kw653"]
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_t6um0"]
+[ext_resource type="PackedScene" uid="uid://cqci20ogtvr2s" path="res://scenes/enemies/crab.tscn" id="3_s3sut"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/cactus.tscn" id="4_lii8o"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/serpent.tscn" id="5_132bq"]
 
 [node name="S08" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_t6um0")
@@ -31,3 +34,40 @@ tile_set = ExtResource("1_kw653")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAJAO7/AQAAAAAAAgA=")
 tile_set = ExtResource("1_kw653")
+
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAGAN//AgAAAAAADAATAOr/AgAAAAAADAD5/+r/AgAAAAAADAD5//T/AgAAAAAACQATAPT/AgAAAAAACQAGAP//AgAAAAAACQAAAPr/AgAAAAAACgDz/+//AgAAAAAACgAAAOT/AgAAAAAACgAMAOT/AgAAAAAACwAZAO//AgAAAAAACwAMAPr/AgAAAAAACwA=")
+tile_set = ExtResource("1_kw653")
+
+[node name="Enemy" parent="." instance=ExtResource("3_s3sut")]
+position = Vector2(-86, -560)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_s3sut")]
+position = Vector2(-114, -523)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_s3sut")]
+position = Vector2(648, -566)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_s3sut")]
+position = Vector2(679, -538)
+
+[node name="Enemy5" parent="." instance=ExtResource("4_lii8o")]
+position = Vector2(191, -615)
+
+[node name="Enemy6" parent="." instance=ExtResource("4_lii8o")]
+position = Vector2(152, -559)
+
+[node name="Enemy7" parent="." instance=ExtResource("4_lii8o")]
+position = Vector2(188, -502)
+
+[node name="Enemy8" parent="." instance=ExtResource("5_132bq")]
+position = Vector2(266, -185)
+
+[node name="Enemy9" parent="." instance=ExtResource("5_132bq")]
+position = Vector2(308, -819)
+
+[node name="Enemy10" parent="." instance=ExtResource("5_132bq")]
+position = Vector2(169, -791)
+
+[connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]

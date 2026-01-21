@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=4 uid="uid://yi8a6p4k1rhl"]
+[gd_scene load_steps=5 format=4 uid="uid://yi8a6p4k1rhl"]
 
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_dbbvf"]
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_jchi0"]
+[ext_resource type="PackedScene" uid="uid://dw5bwmgog7lhf" path="res://scenes/enemies/beholder.tscn" id="3_wbt4f"]
+[ext_resource type="PackedScene" uid="uid://csjidcmpwprp1" path="res://scenes/enemies/rats.tscn" id="4_qpoxn"]
 
 [node name="M05" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_jchi0")
@@ -20,4 +22,18 @@ tile_set = ExtResource("1_dbbvf")
 [node name="ObstacleLayer" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAABAPb/AAAIAAIAAAABAPf/AAAOAAEAABABAPr/AAANAAIAABABAP7/AAAGAAoAAAACAPb/AAAOAAEAAAACAPr/AAALAAIAAFACAPv/AAAMAAIAAEACAPz/AAAMAAIAAEACAP3/AAALAAIAAGADAP3/AAAMAAIAADAEAP3/AAAMAAIAADAFAP3/AAAMAAIAADAHAP3/AAAMAAIAADAIAP3/AAAMAAIAADAJAPf/AAAJAAIAAAAJAP3/AAAMAAIAADAKAPf/AAAIAAIAAAAKAPj/AAAEAAQAAAAKAPr/AAALAAIAAAAKAPv/AAAMAAIAAGAKAPz/AAAMAAIAAGAKAP3/AAALAAIAAHAKAP7/AAAOAAEAABALAPf/AAAEAAQAABALAPr/AAANAAIAAAALAP3/AAANAAEAAAALAPb/AAAEAAQAAHAGAP3/AAAMAAIAAAADAPr/AAANAAUAABAJAPr/AAANAAUAAAA=")
+tile_set = ExtResource("1_dbbvf")
+
+[node name="Enemy" parent="." instance=ExtResource("3_wbt4f")]
+position = Vector2(209, -83)
+
+[node name="Enemy2" parent="." instance=ExtResource("4_qpoxn")]
+position = Vector2(368, -301)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_qpoxn")]
+position = Vector2(79, -271)
+
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAGAP//AgAAAAAAAQAAAPr/AgAAAAAAAgAMAPr/AgAAAAAAAwAGAPX/AgAAAAAABAA=")
 tile_set = ExtResource("1_dbbvf")

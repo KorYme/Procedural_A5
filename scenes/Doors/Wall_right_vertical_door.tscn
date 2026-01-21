@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxo6mqnrkq1bd"]
+
+[ext_resource type="PackedScene" uid="uid://7am1e8bo6vra" path="res://scenes/base_door_vertical.tscn" id="1_kugdo"]
+
+[node name="VerticalDoor" instance=ExtResource("1_kugdo")]
+
+[node name="Open" parent="OpenWall" index="0"]
+region_rect = Rect2(0, 18, 8, 8)
+
+[node name="Open3" parent="OpenWall" index="2"]
+region_rect = Rect2(0, 0, 8, 8)

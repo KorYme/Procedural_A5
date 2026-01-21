@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://cseh7avy1v0ub"]
+[gd_scene load_steps=4 format=4 uid="uid://cseh7avy1v0ub"]
 
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_2i5je"]
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_glj5i"]
+[ext_resource type="PackedScene" uid="uid://dw5bwmgog7lhf" path="res://scenes/enemies/beholder.tscn" id="3_c4vay"]
 
 [node name="M08" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_glj5i")
@@ -22,8 +23,25 @@ scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAGAO//AQAAAAAAAgD5/+//AQAAAAAAAgAGAOT/AQAAAAAAAgATAO//AQAAAAAAAgAGAPr/AQAAAAAAAgA=")
 tile_set = ExtResource("1_2i5je")
 
-[connection signal="body_entered" from="LayerSpawnItem/ItemCollectible" to="LayerSpawnItem/ItemCollectible" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@69944" to="LayerSpawnItem/@Area2D@69944" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@69945" to="LayerSpawnItem/@Area2D@69945" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@69946" to="LayerSpawnItem/@Area2D@69946" method="_on_body_entered"]
-[connection signal="body_entered" from="LayerSpawnItem/@Area2D@69947" to="LayerSpawnItem/@Area2D@69947" method="_on_body_entered"]
+[node name="Enemy" parent="." instance=ExtResource("3_c4vay")]
+position = Vector2(378, -531)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_c4vay")]
+position = Vector2(-74, -528)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_c4vay")]
+position = Vector2(201, -752)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_c4vay")]
+position = Vector2(203, -335)
+
+[node name="Enemy5" parent="." instance=ExtResource("3_c4vay")]
+position = Vector2(98, -635)
+
+[node name="Enemy6" parent="." instance=ExtResource("3_c4vay")]
+position = Vector2(309, -391)
+
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD5/+r/AgAAAAAABAAGAN//AgAAAAAABAATAOr/AgAAAAAABAAMAOT/AgAAAAAAAwAZAO//AgAAAAAAAwAMAPr/AgAAAAAAAwAAAPr/AgAAAAAAAgDz/+//AgAAAAAAAgAAAOT/AgAAAAAAAgD5//T/AgAAAAAAAQAGAP//AgAAAAAAAQATAPT/AgAAAAAAAQA=")
+tile_set = ExtResource("1_2i5je")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://bm18wpyiowhst"]
+[gd_scene load_steps=4 format=4 uid="uid://bm18wpyiowhst"]
 
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_5kmfs"]
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_fwfhf"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/cactus.tscn" id="3_rmw5y"]
 
 [node name="S05" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_5kmfs")
@@ -20,3 +21,13 @@ tile_set = ExtResource("1_fwfhf")
 [node name="ItemSpawnLayer" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
 tile_set = ExtResource("1_fwfhf")
+
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_set = ExtResource("1_fwfhf")
+
+[node name="Enemy" parent="." instance=ExtResource("3_rmw5y")]
+position = Vector2(292, -119)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_rmw5y")]
+position = Vector2(103, -237)

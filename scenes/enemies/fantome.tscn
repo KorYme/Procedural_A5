@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://2wvxhdocwhsq"]
+[gd_scene load_steps=7 format=3 uid="uid://b4ejb3dyn1ex6"]
 
 [ext_resource type="Script" uid="uid://b5df80s50tpg6" path="res://scripts/enemy.gd" id="1_ls5lp"]
 [ext_resource type="Resource" uid="uid://4wrtqv1kgm5c" path="res://resources/enemy_default_movement.tres" id="2_bimo1"]
@@ -14,6 +14,7 @@ motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_ls5lp")
 attack_distance = 30.0
+life = 1
 default_movement = ExtResource("2_bimo1")
 stunned_movemement = ExtResource("3_1jp1o")
 attack_scene = ExtResource("4_dob1w")

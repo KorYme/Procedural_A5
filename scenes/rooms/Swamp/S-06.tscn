@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=4 uid="uid://keu0su7ddd74"]
+[gd_scene load_steps=5 format=4 uid="uid://keu0su7ddd74"]
 
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_gbmwf"]
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_uvcw4"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/serpent.tscn" id="3_76bpn"]
+[ext_resource type="PackedScene" uid="uid://cqci20ogtvr2s" path="res://scenes/enemies/crab.tscn" id="4_e02bw"]
 
 [node name="S06" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_gbmwf")
@@ -31,3 +33,35 @@ tile_set = ExtResource("1_uvcw4")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAHAPr/AQAAAAAAAgAJAOn/AQAAAAAAAgA=")
 tile_set = ExtResource("1_uvcw4")
+
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAGAP//AgAAAAAACQAAAPr/AgAAAAAACgAMAPr/AgAAAAAACwAGAN//AgAAAAAADAATAN//AgAAAAAADAD5/9//AgAAAAAADAAZAOT/AgAAAAAACwAMAO//AgAAAAAACwDz/+T/AgAAAAAACgAAAO//AgAAAAAACgD5/+n/AgAAAAAACQATAOn/AgAAAAAACQA=")
+tile_set = ExtResource("1_uvcw4")
+
+[node name="Enemy" parent="." instance=ExtResource("3_76bpn")]
+position = Vector2(246, -114)
+
+[node name="Enemy2" parent="." instance=ExtResource("4_e02bw")]
+position = Vector2(138, -607)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_e02bw")]
+position = Vector2(222, -671)
+
+[node name="Enemy4" parent="." instance=ExtResource("4_e02bw")]
+position = Vector2(202, -922)
+
+[node name="Enemy5" parent="." instance=ExtResource("4_e02bw")]
+position = Vector2(-71, -912)
+
+[node name="Enemy6" parent="." instance=ExtResource("4_e02bw")]
+position = Vector2(-115, -864)
+
+[node name="Enemy7" parent="." instance=ExtResource("3_76bpn")]
+position = Vector2(715, -796)
+
+[node name="Enemy8" parent="." instance=ExtResource("4_e02bw")]
+position = Vector2(208, -487)
+
+[connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]
+[connection signal="body_entered" from="ItemSpawnLayer/@Area2D@106478" to="ItemSpawnLayer/@Area2D@106478" method="_on_body_entered"]
