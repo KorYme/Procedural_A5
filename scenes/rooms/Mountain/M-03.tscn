@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=4 uid="uid://c6xhts12wasju"]
+[gd_scene load_steps=5 format=4 uid="uid://c6xhts12wasju"]
 
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_jfvj3"]
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_y5ol5"]
+[ext_resource type="PackedScene" uid="uid://b0ahenmxn2ain" path="res://scenes/enemies/enemy.tscn" id="3_ljb1i"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/rats.tscn" id="4_c6liw"]
 
 [node name="C03" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_y5ol5")
@@ -21,3 +23,17 @@ tile_set = ExtResource("1_jfvj3")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAATAPv/AQAAAAAAAgA=")
 tile_set = ExtResource("1_jfvj3")
+
+[node name="Enemy" parent="." instance=ExtResource("3_ljb1i")]
+position = Vector2(578, -164)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_ljb1i")]
+position = Vector2(676, -164)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_c6liw")]
+position = Vector2(338, -124)
+
+[node name="Enemy4" parent="." instance=ExtResource("4_c6liw")]
+position = Vector2(530, -332)
+
+[connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]
