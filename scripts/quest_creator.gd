@@ -9,7 +9,7 @@ var itemDesc : String
 
 var currentQuest : Quest
 
-var races = ["bete", "elfe", "fantome", "hommearbre", "nain"]
+var races = ["bete", "elfe", "fantome", "hommearbre", "nain", "humain"]
 
 static func LoadJson(path: String) -> Dictionary:
 	var file = FileAccess.open(path, FileAccess.READ)
@@ -31,7 +31,7 @@ static func LoadJson(path: String) -> Dictionary:
 	
 func CreateQuest():
 	var race = races[randi_range(0, races.size() - 1)]
-	var data = LoadJson("res://Pnjson/"+race+".json")
+	var data = LoadJson("res://Pnjson/humain.json")
 	var grammar = Tracery.Grammar.new(data)
 	
 	var rng = RandomNumberGenerator.new()
@@ -43,14 +43,12 @@ func CreateQuest():
 	for i in grammar._save_data:
 		print(i + grammar._save_data[i])
 		
-	
-	hud.label.text = sentenceAray[1]
-	hud.itemLabel.text = sentenceAray[2]
+
 
 	var currentQuestItem: ItemData = ItemData.new(grammar._save_data["item"],
 	grammar._save_data["indiceI1"], grammar._save_data["indiceI2"])
 
-	currentQuest = Quest.new(currentQuestItem, sentenceAray[2], sentenceAray[1], race, sentenceAray[0])
+	currentQuest = Quest.new(currentQuestItem, sentenceAray[1], sentenceAray[2], race, sentenceAray[0])
 	
 	itemGenerator.DispatchItems(currentQuestItem)
 	

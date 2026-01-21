@@ -18,9 +18,9 @@ position = Vector2(583, 794)
 zoom = Vector2(2.25, 2.25)
 
 [node name="hud" parent="." instance=ExtResource("7_i43eg")]
-visible = false
 
 [node name="GameOverMenu" parent="." instance=ExtResource("3_18nlu")]
+visible = false
 
 [node name="QuestCreator" type="Node" parent="." node_paths=PackedStringArray("hud", "itemGenerator")]
 script = ExtResource("8_18nlu")

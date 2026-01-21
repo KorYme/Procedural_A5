@@ -1,6 +1,6 @@
 {
   "origin": [
-    "#setItem#;#queteStory#;#itemDesc#"
+    "#setName##setItem#;#queteStory#;#itemDesc#"
   ],
 "setName": [
     "Laurin Verdun",
@@ -15,10 +15,10 @@
     "Gauthier Renaud"
   ],
 "setItem": [
-    "#[item:epee]#setIndice1Epee##setIndice2#",
-    "#[item:masse]#setIndice1Masse##setIndice2#",
-    "#[item:lance]#setIndice1Lance##setIndice2#",
-    "#[item:hache]#setIndice1Hache##setIndice2#"
+    "#[item:epee]setIndice1Epee##setIndice2#",
+    "#[item:masse]setIndice1Masse##setIndice2#",
+    "#[item:lance]setIndice1Lance##setIndice2#",
+    "#[item:hache]setIndice1Hache##setIndice2#"
   ],
 "setIndice1Epee": [
 "#[indiceQ1:tranchant][indiceI1:aiguisée][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisée]#",

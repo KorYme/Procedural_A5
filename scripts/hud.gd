@@ -62,7 +62,8 @@ func on_collect_data(data: ItemData) -> void:
 	currentItemClue1.text = data.indice1
 	currentItemClue2.text = data.indice2
 	
-
+	await get_tree().create_timer(3.0).timeout
+	toggleDialogueBox(false)
 		
 	pass
 	
