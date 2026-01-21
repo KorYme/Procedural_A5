@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=4 uid="uid://cbd7jb4qtj81r"]
+[gd_scene load_steps=5 format=4 uid="uid://cbd7jb4qtj81r"]
 
 [ext_resource type="TileSet" uid="uid://dflbx7n6dv42u" path="res://resources/tilesets/TileSetPackAsset.tres" id="1_kftr1"]
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_uclxb"]
+[ext_resource type="PackedScene" uid="uid://2wvxhdocwhsq" path="res://scenes/enemies/fantome.tscn" id="3_un2hy"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/beholder.tscn" id="4_ey5yn"]
 
 [node name="C05" type="Node2D" node_paths=PackedStringArray("tilemap_layers")]
 script = ExtResource("1_uclxb")
@@ -25,3 +27,9 @@ tile_set = ExtResource("1_kftr1")
 [node name="ItemSpawnLayer" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
 tile_set = ExtResource("1_kftr1")
+
+[node name="Enemy" parent="." instance=ExtResource("3_un2hy")]
+position = Vector2(284, -216)
+
+[node name="Enemy2" parent="." instance=ExtResource("4_ey5yn")]
+position = Vector2(122, -151)
