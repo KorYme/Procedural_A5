@@ -32,21 +32,21 @@ func enter_room(room : Room) -> void:
 
 
 func _update_room() -> void:
-	if _room != null:
+	if _room == null:
 		return
-	var room_bounds : Rect2 = _room.get_world_bounds()
-	var next_room : Room = null
-	if position.x > room_bounds.end.x:
-		next_room = _room.get_adjacent_room(Utils.ORIENTATION.EAST, position)
-	elif position.x < room_bounds.position.x:
-		next_room = _room.get_adjacent_room(Utils.ORIENTATION.WEST, position)
-	elif position.y < room_bounds.position.y:
-		next_room = _room.get_adjacent_room(Utils.ORIENTATION.NORTH, position)
-	elif position.y > room_bounds.end.y:
-		next_room = _room.get_adjacent_room(Utils.ORIENTATION.SOUTH, position)
-
-	if next_room != null:
-		enter_room(next_room)
+	#var room_bounds : Rect2 = _room.get_world_bounds()
+	#var next_room : Room = null
+	#if position.x > room_bounds.end.x:
+		#next_room = _room.get_adjacent_room(Utils.ORIENTATION.EAST, position)
+	#elif position.x < room_bounds.position.x:
+		#next_room = _room.get_adjacent_room(Utils.ORIENTATION.WEST, position)
+	#elif position.y < room_bounds.position.y:
+		#next_room = _room.get_adjacent_room(Utils.ORIENTATION.NORTH, position)
+	#elif position.y > room_bounds.end.y:
+		#next_room = _room.get_adjacent_room(Utils.ORIENTATION.SOUTH, position)
+#
+	#if next_room != null:
+		#enter_room(next_room)
 
 
 func _update_inputs() -> void:

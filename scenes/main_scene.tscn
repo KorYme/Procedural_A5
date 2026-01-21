@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dy8q5lbirwh1y" path="res://scripts/main_scene.gd" id="1_18nlu"]
 [ext_resource type="PackedScene" uid="uid://bib07te5reau7" path="res://scenes/player.tscn" id="1_qspk8"]
 [ext_resource type="Script" uid="uid://4eq20em80d1w" path="res://scripts/camera_follow.gd" id="2_liovv"]
-[ext_resource type="Resource" uid="uid://b4fu4mwt40pk1" path="res://resources/all_rooms.tres" id="2_rt2n2"]
+[ext_resource type="Resource" uid="uid://cfw2u1fdhsshj" path="res://resources/rooms.tres" id="2_rt2n2"]
 [ext_resource type="PackedScene" uid="uid://b20085rng87fk" path="res://scenes/hud.tscn" id="7_i43eg"]
 [ext_resource type="Script" uid="uid://ctfjr4q8b6iq4" path="res://scripts/quest_creator.gd" id="8_18nlu"]
 
@@ -15,13 +15,14 @@ room_data = ExtResource("2_rt2n2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(96, -80)
-zoom = Vector2(0.38, 0.38)
+zoom = Vector2(2.25, 2.25)
 script = ExtResource("2_liovv")
 
 [node name="Player" parent="." instance=ExtResource("1_qspk8")]
 position = Vector2(47, -63)
 
 [node name="hud" parent="." instance=ExtResource("7_i43eg")]
+visible = false
 
 [node name="QuestCreator" type="Node" parent="." node_paths=PackedStringArray("hud")]
 script = ExtResource("8_18nlu")

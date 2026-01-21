@@ -7,6 +7,11 @@ var _bounds : Rect2 = Rect2(Vector2.ZERO, Vector2.INF)
 var _target_position : Vector2 = Vector2.ZERO
 var _target : Node2D = null
 
+static var Instance : CameraFollow
+
+func _init() -> void:
+	Instance = self
+
 
 func _ready() -> void:
 	position = _target_position

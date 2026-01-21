@@ -24,6 +24,10 @@ shape = SubResource("RectangleShape2D_qk64d")
 position = Vector2(8, 0)
 shape = SubResource("RectangleShape2D_qk64d")
 
+[node name="MiddleCollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_j3msj")
+
 [node name="ClosedWall" type="Node2D" parent="."]
 visible = false
 
