@@ -27,6 +27,7 @@ project/assembly_name="Procedural"
 [global_group]
 
 player=""
+Items=""
 
 [input]
 

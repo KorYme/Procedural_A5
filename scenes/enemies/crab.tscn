@@ -26,4 +26,4 @@ z_index = 2
 scale = Vector2(3, 3)
 texture = ExtResource("5_cabm5")
 region_enabled = true
-region_rect = Rect2(89.95592, 0, 8.054596, 8.586205)
+region_rect = Rect2(108.00451, -0.011848807, 7.987358, 8.018894)

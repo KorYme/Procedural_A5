@@ -51,6 +51,10 @@ func CreateQuest():
 	itemsBatch = ItemGenerator.GenerateItemBatch(currentQuestItem, 5)
 	print(sentence)
 	
+	var test = get_tree().get_nodes_in_group("Items")
+	for i in test:
+		print(i.name)
+	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dialogue"):
 		CreateQuest()
