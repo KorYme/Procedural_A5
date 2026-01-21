@@ -26,3 +26,7 @@ tile_set = ExtResource("1_asc8p")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAARAPn/AQAAAAAAAgA=")
 tile_set = ExtResource("1_asc8p")
+
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_set = ExtResource("1_asc8p")

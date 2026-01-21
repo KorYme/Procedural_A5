@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd7drgd172t0m"]
+
+[ext_resource type="PackedScene" uid="uid://b3e4ce3ykd01c" path="res://scenes/base_door_horizontal.tscn" id="1_bvoqy"]
+
+[node name="HorizontalDoor" instance=ExtResource("1_bvoqy")]
+
+[node name="ClosedWall" parent="." index="3"]
+visible = true

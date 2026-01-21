@@ -31,3 +31,8 @@ tile_set = ExtResource("1_uvcw4")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAHAPr/AQAAAAAAAgAJAOn/AQAAAAAAAgA=")
 tile_set = ExtResource("1_uvcw4")
+
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAGAP//AgAAAAAACQAAAPr/AgAAAAAACgAMAPr/AgAAAAAACwAGAN//AgAAAAAADAATAN//AgAAAAAADAD5/9//AgAAAAAADAAZAOT/AgAAAAAACwAMAO//AgAAAAAACwDz/+T/AgAAAAAACgAAAO//AgAAAAAACgD5/+n/AgAAAAAACQATAOn/AgAAAAAACQA=")
+tile_set = ExtResource("1_uvcw4")

@@ -31,3 +31,10 @@ tile_set = ExtResource("1_kw653")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAJAO7/AQAAAAAAAgA=")
 tile_set = ExtResource("1_kw653")
+
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAGAN//AgAAAAAADAATAOr/AgAAAAAADAD5/+r/AgAAAAAADAD5//T/AgAAAAAACQATAPT/AgAAAAAACQAGAP//AgAAAAAACQAAAPr/AgAAAAAACgDz/+//AgAAAAAACgAAAOT/AgAAAAAACgAMAOT/AgAAAAAACwAZAO//AgAAAAAACwAMAPr/AgAAAAAACwA=")
+tile_set = ExtResource("1_kw653")
+
+[connection signal="body_entered" from="ItemSpawnLayer/ItemCollectible" to="ItemSpawnLayer/ItemCollectible" method="_on_body_entered"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://da1ies2kgv1s"]
+
+[ext_resource type="PackedScene" uid="uid://b3e4ce3ykd01c" path="res://scenes/base_door_horizontal.tscn" id="1_nrl47"]
+
+[node name="HorizontalDoor" instance=ExtResource("1_nrl47")]
+
+[node name="ClosedWall" parent="." index="3"]
+visible = true
+
+[node name="Wall" parent="ClosedWall" index="0"]
+region_rect = Rect2(45, 45, 8, 8)
+
+[node name="Wall2" parent="ClosedWall" index="1"]
+region_rect = Rect2(36, 45, 8, 8)
+
+[node name="Wall3" parent="ClosedWall" index="2"]
+region_rect = Rect2(36, 45, 8, 8)
+
+[node name="OpenWall" parent="." index="4"]
+visible = false
+
+[node name="Open" parent="OpenWall" index="0"]
+region_rect = Rect2(45, 45, 8, 8)
+
+[node name="Open3" parent="OpenWall" index="2"]
+region_rect = Rect2(36, 45, 8, 8)

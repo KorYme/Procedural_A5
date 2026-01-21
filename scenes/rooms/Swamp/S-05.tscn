@@ -20,3 +20,7 @@ tile_set = ExtResource("1_fwfhf")
 [node name="ItemSpawnLayer" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
 tile_set = ExtResource("1_fwfhf")
+
+[node name="DoorLayer" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_set = ExtResource("1_fwfhf")
