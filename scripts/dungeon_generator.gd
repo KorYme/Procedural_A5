@@ -6,7 +6,7 @@ var directions : Array[Vector2i] = [Vector2i( 1, 0 ), Vector2i( -1, 0 ),
 Vector2i( 0, 1 ), Vector2i( 0, -1 )]
 
 func _ready() -> void:
-	#generate_dungeons()
+	generate_dungeons()
 	pass
 
 func generate_dungeons(size : int = 5, biome : RoomData.RoomBiome = RoomData.RoomBiome.Cemetary) -> void:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsv48c60vqne2"]
 
 [ext_resource type="Script" uid="uid://d0ufgduhrp8q1" path="res://scripts/item_collectible.gd" id="1_a1h84"]
-[ext_resource type="Texture2D" uid="uid://b8c6ax537qh4l" path="res://sprites/image-removebg-preview.png" id="2_a1h84"]
+[ext_resource type="Texture2D" uid="uid://bf515o50r6yb7" path="res://sprites/Tiles/Colored/tile_0057.png" id="2_a1h84"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxpyt"]
 
@@ -14,7 +14,7 @@ shape = SubResource("RectangleShape2D_qxpyt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(9.53674e-07, -9.53674e-07)
-scale = Vector2(0.05144694, 0.051446974)
+scale = Vector2(0.99999976, 1.0000004)
 texture = ExtResource("2_a1h84")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

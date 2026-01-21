@@ -8,7 +8,6 @@ var isSettedUp : bool
 func _ready() -> void:
 	var hud : Hud = get_tree().root.get_node("MainScene/hud")
 	collected.connect(hud.on_collect_data)
-	on_collect()
 
 func setup(data: ItemData):
 	sprite.texture = data.sprite

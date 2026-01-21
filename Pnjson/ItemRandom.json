@@ -3,7 +3,7 @@
 "#setItem##itemDesc#"
 ],
 "setItem": [
-"#[item:épée]setIndice1Epee##setIndice2#",
+"#[item:epee]setIndice1Epee##setIndice2#",
 "#[item:masse]setIndice1Masse##setIndice2#",
 "#[item:lance]setIndice1Lance##setIndice2#",
 "#[item:hache]setIndice1Hache##setIndice2#"

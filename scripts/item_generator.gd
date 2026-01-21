@@ -27,7 +27,7 @@ func GenerateItemBatch(bannedItem: ItemData) -> ItemData:
 func DispatchItems(questItem : ItemData) -> void:
 	var rooms : Array[Room] = Room.all_rooms
 	
-	var nbRoomToSpawnItems : int =  max(1, rooms.size() / percentageOfRoomsWithItem)
+	var nbRoomToSpawnItems : int =  max(1, rooms.size() * percentageOfRoomsWithItem)
 	
 	for i in range(0, nbRoomToSpawnItems):
 		var roomIndex : int = randi_range(0, rooms.size() - 1)

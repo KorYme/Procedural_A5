@@ -8,6 +8,11 @@ var previous_life : int
 
 @onready var life_container : BoxContainer = $"LifeContainer"
 
+#Item desc
+@export var itemFoundSprite : Sprite2D
+@export var itemFoundDesc : Label
+@export var UiDescItems : Array[Node]
+
 
 
 
@@ -38,5 +43,15 @@ func _remove_heart() -> void:
 	life_container.remove_child(heart)
 	
 func on_collect_data(data: ItemData) -> void:
-	print("youpi")
+	
+	for i in UiDescItems:
+		i.visible = true
+		
+	itemFoundSprite.texture = data.sprite
+	itemFoundDesc.text = data.type + " " + data.indice1 + " " + data.indice2
+	
+	await get_tree().create_timer(4.0).timeout
+	for i in UiDescItems:
+		i.visible = false
+		
 	pass
