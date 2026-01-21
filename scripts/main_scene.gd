@@ -18,10 +18,11 @@ func generate_dungeons(size : int = 5, biome : RoomData.RoomBiome = RoomData.Roo
 	for i in range(size):
 		tab.append(sub_tab.duplicate(true))
 
+	var first_room_pos : Vector2i = Vector2i(size / 2, 0)
 	@warning_ignore("narrowing_conversion")
 	var room_number : int = size * size * 0.5
 	@warning_ignore("integer_division")
-	var coordinates : Array[Vector2i] = [Vector2i(size / 2, 0)]
+	var coordinates : Array[Vector2i] = [first_room_pos]
 	@warning_ignore("integer_division")
 	tab[0][size / 2] = true
 	
@@ -29,7 +30,7 @@ func generate_dungeons(size : int = 5, biome : RoomData.RoomBiome = RoomData.Roo
 		coordinates.shuffle()
 		var index : int = coordinates.find_custom(
 			func(value): 
-			return check_coordinates(tab, value) == 0
+			return has_empty_box_near(tab, value) == 1
 			)
 		var pos : Vector2i = coordinates[index]
 		
@@ -46,10 +47,11 @@ func generate_dungeons(size : int = 5, biome : RoomData.RoomBiome = RoomData.Roo
 	for x in range(size):
 		for y in range(size):
 			if tmp_fill_tab[y][x]:
-				var tmp_room : RoomData = room_data.Rooms.filter(
+				var tmp_rooms : Array[RoomData] = room_data.Rooms.filter(
 					func(roomData):
 					return check_room_fit_in(roomData, tmp_fill_tab, Vector2i(x, y)) and roomData.room_biome == biome
-				).pick_random()
+				)
+				var tmp_room : RoomData = tmp_rooms.pick_random()
 				tmp_fill_tab[y][x] = false
 				for dir in tmp_room.room_shape:
 					tmp_fill_tab[y + dir.y][x + dir.x] = false
@@ -59,21 +61,36 @@ func generate_dungeons(size : int = 5, biome : RoomData.RoomBiome = RoomData.Roo
 				instance.position.x = (x - size / 2) * room_data.RoomSize.x
 				instance.position.y = -y * room_data.RoomSize.y
 				add_child(instance)
+				#TMP
+				if first_room_pos.x == x and first_room_pos.y == y and instance is Room:
+					Player.Instance.enter_room(instance)
 				
 	for room in Room.all_rooms:
 		for door in room.doors:
 			door.setup()
 
-# 0 is false, 1 is true, 2 is out of bounds
+# 0 is false, 1 is true, -1 is out of bounds
 func check_coordinates(tab : Array[Array], value : Vector2i) -> int:
 	var size_y : int = tab.size()
 	if size_y <= 0:
-		return 2
+		return -1
 	var size_x : int = tab[0].size()
 	if size_x < 0:
-		return 2
+		return -1
 	if value.x >= size_x or value.y >= size_y or value.x < 0 or value.y < 0:
-		return 2
+		return -1
+	return tab[value.y][value.x]
+
+# 0 is false, 1 is true, -1 is out of bounds
+func has_empty_box_near(tab : Array[Array], value : Vector2i) -> int:
+	var size_y : int = tab.size()
+	if size_y <= 0:
+		return -1
+	var size_x : int = tab[0].size()
+	if size_x < 0:
+		return -1
+	if value.x >= size_x or value.y >= size_y or value.x < 0 or value.y < 0:
+		return -1
 	if value.y + 1 < size_y and tab[value.y + 1][value.x]: 
 		return 1
 	if value.y - 1 >= 0 and tab[value.y - 1][value.x]:
@@ -86,6 +103,6 @@ func check_coordinates(tab : Array[Array], value : Vector2i) -> int:
 
 func check_room_fit_in(room : RoomData, tab : Array[Array], origin : Vector2i) -> bool:
 	for dir in room.room_shape:
-		if check_coordinates(tab, origin + dir) == 0:
+		if check_coordinates(tab, origin + dir) != 1:
 			return false
 	return true

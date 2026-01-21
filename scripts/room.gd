@@ -1,7 +1,5 @@
 class_name Room extends Node2D
 
-# Position of the room in index coordinates. Coordinates {0,0} are the coordinates of the central room. Room {1,0} is on the right side of room {0,0}.
-@export var room_pos : Vector2i = Vector2i.ZERO
 # Size of the room in index coordinates. By default : {1,1}.
 @export var room_size : Vector2i = Vector2i.ONE
 @export var tilemap_layers : Array[TileMapLayer]
@@ -10,13 +8,9 @@ static var all_rooms : Array[Room]
 
 var doors : Array[Door]
 
-@onready var _cam : CameraFollow = $/root/MainScene/Camera2D
-
 
 func _ready() -> void:
 	all_rooms.push_back(self)
-	if all_rooms.size() == 1:
-		Player.Instance.enter_room(self)
 
 
 func get_local_bounds() -> Rect2:
@@ -46,7 +40,7 @@ func contains(point : Vector2) -> bool:
 
 func on_enter_room(from : Room) -> void:
 	var camera_bounds = get_world_bounds()
-	_cam.set_bounds(camera_bounds)
+	CameraFollow.Instance.set_bounds(camera_bounds)
 
 
 #func get_adjacent_room(orientation : Utils.ORIENTATION, from : Vector2) -> Room:

@@ -3,7 +3,7 @@ class_name RoomData extends Resource
 enum RoomBiome
 {
 	Cemetary,
-	Foreset,
+	Forest,
 	Swamp,
 	Mountain,
 	Desert,
