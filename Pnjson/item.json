@@ -1,0 +1,66 @@
+{
+"origin": [
+"#setItem##itemDesc#"
+],
+"setItem": [
+"#[item:épée]setIndice1Epee##setIndice2#",
+"#[item:masse]setIndice1Masse##setIndice2#",
+"#[item:lance]setIndice1Lance##setIndice2#",
+"#[item:hache]setIndice1Hache##setIndice2#"
+],
+"setIndice1Epee": [
+"[indiceQ1:tranchant][indiceI1:aiguisée][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisée]",
+"[indiceQ1:abimé][indiceI1:fissurée][indiceQ1Extend:vieux, abimé, cassé][indiceI1Extend:ayant tellement servi qu'elle est couverte de fissure]",
+"[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutôt bien décorée et assurément précieuse]",
+"[indiceQ1:tordue][indiceI1:courbe][indiceQ1Extend:tordu, d'ailleur j'ai jamais compris qui l'avais plié comme ca][indiceI1Extend: courbe]"
+],
+"setIndice1Masse": [
+"[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
+"[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutôt bien décorée et assurément précieuse]",
+"[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:particulièrement grand][indiceI1Extend:au manche allongé]",
+"[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]"
+],
+"setIndice1Lance": [
+"[indiceQ1:pointu][indiceI1:perforante][indiceQ1Extend:pointu][indiceI1Extend:à la tête perforante]",
+"[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:particulièrement grand][indiceI1Extend:au manche allongé]",
+"[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]",
+"[indiceQ1:invisible][indiceI1:flou][indiceQ1Extend:presque invisible][indiceI1Extend:imperceptible]"
+],
+"setIndice1Hache": [
+"[indiceQ1:menacant][indiceI1:dangereuse][indiceQ1Extend:inquiétant][indiceI1Extend:maudite et imprégnée d'une aura meurtrière]",
+"[indiceQ1:instable][indiceI1:vibrante][indiceQ1Extend:on aurait dit qu'il serait capable d'exploser à tout moment][indiceI1Extend:qui vibre constamment 🫦 et est probablement instable]",
+"[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
+"[indiceQ1:tranchant][indiceI1:aiguisée][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisée]"
+],
+
+    "setIndice2": [
+    "[indiceQ2:héritage][indiceI2:manufacture humaine][indiceQ2Extend:de famille][indiceI2Extend:créé par des piteux humains]",
+    "[indiceQ2:époque sombre][indiceI2:grande révolution humaine][indiceQ2Extend:représentant les pires heures humaines][indiceI2Extend:datant de la première guerre civile humaine]",
+    "[indiceQ2:sainte][indiceI2:béni][indiceQ2Extend:divin][indiceI2Extend:couverte d'eau de dieu]",
+    "[indiceQ2:banale][indiceI2:commune][indiceQ2Extend:comme les autres][indiceI2Extend:sans petit truc en plus]",
+"[indiceQ2:héritage][indiceI2:manufacture naine][indiceQ2Extend:que mes vieux m'ont légué][indiceI2Extend:créée par le peuple aigri]",
+"[indiceQ2:fait maison][indiceI2:bricolé][indiceQ2Extend:de ma propre fabrication][indiceI2Extend:elle est tellement bricolé qu'elle ne ressemble à rien]",
+"[indiceQ2:pratique][indiceI2:multifonction][indiceQ2Extend: mais surtout bien pratique !][indiceI2Extend:on dirait qu'elle a été modifiée pour servir d'outil multifonction]",
+"[indiceQ2:fantomatique][indiceI2:mi-nain/mi-fantomatique][indiceQ2Extend:je l'avais acheté auprès d'un fantôme avant d'y apporter ma touche personnelle][indiceI2Extend:c'est une de ses fameuses armes bâtardes que le peuple nain et fantomatique font ensemble]",
+"[indiceQ2:héritage][indiceI2:manufacture elfe][indiceQ2Extend:léguer par mes vénérables ancêtres][indiceI2Extend:créée par d'horribles elfes]",
+"[indiceQ2:anti homme-arbre][indiceI2:enflammer][indiceQ2Extend:pratique pour éradiquer nos ennemis hommes arbres qui refusent le progrès vers lequel notre grand guide nous amène][indiceI2Extend:capable d'enflammer ses victimes]",
+"[indiceQ2:sophistiqué][indiceI2:futuristique][indiceQ2Extend:résultat d'années d'études et de progrès de notre grande nation supérieure][indiceI2Extend:elle semble tout droit sortie du futur]",
+"[indiceQ2:effigie du guide][indiceI2:Portrait gravure][indiceQ2Extend:j'avais pris le soin d'ajouter une gravure à l'effigie de notre magnifique guide touristique][indiceI2Extend:un portrait est gravé sur une extrémité]",
+"[indiceQ2:héééritaaageee][indiceI2:manufacture homme-arbre][indiceQ2Extend:que mooon vieuuux chêêêne m'aaaavaiiit léééguééé pouuuur tueer maaa premièèèère victime][indiceI2Extend:créée par les cruels arbres]",
+"[indiceQ2:volé aux elfes][indiceI2:manufacture elfe modifier][indiceQ2Extend:que j'aiii vooolééé a uuun rigoolooo eeeeelfe][indiceI2Extend:c'est une #item# elfe ayant été modifiée par un arbre. Probablement pendant la guerre actuel]",
+"[indiceQ2:volé aux humains][indiceI2:manufacture humaine modifier][indiceQ2Extend:que j'aiii priiiiis suuur un huuumain quiii neeee respiraiiiit pluuuus][indiceI2Extend:c'est une #item# humaine ayant été modifiée par un arbre. Probablement à l'occasion d'un 'échange culturel']",
+"[indiceQ2:volé aux bêtes][indiceI2:manufacture bête modifier][indiceQ2Extend:que j'aiiii obteeeenuuuu ennn jouannnt aaa quiii suuurvit aaa un couup deee hachheee aveeec uuun chiieennn][indiceI2Extend:c'est une #item# bestiale ayant été modifiée par un arbre. Probablement un pillage issus d'un massacre d'une caravane]",
+"[indiceQ2:héritage][indiceI2:manufacture fantomatique][indiceQ2Extend:quE MOn mAîtRE mA léGUé][indiceI2Extend:créée par le mystérieux peuple fantôme]",
+"[indiceQ2:naine][indiceI2:mi-fantomatique/mi-nain][indiceQ2Extend:Qu'uN NAIN m'AvaIS PReParer.][indiceI2Extend:c'est une de ces fameuses armes bâtardes que le peuple nain et fantomatique font ensemble]",
+"[indiceQ2:vestige][indiceI2:ancestrale][indiceQ2Extend:CeTte OBJet daTE de MON VivAnt, il Y A fOrT LONgtemps][indiceI2Extend:c'est rare de croisé une #item# si vieille]",
+"[indiceQ2:LEGENDAIRE][indiceI2:pale imitation][indiceQ2Extend:Un OBJET LegendAirE AyANT serVIT a TueR de NOMbreUX MOnStrE.... EXCALIBUR][indiceI2Extend:.... on dirait .... une grossière imitations d'excalibur.]",
+"[indiceQ2:héritage][indiceI2:manufacture bestiale][indiceQ2Extend:un pécieux héritage de mes géniteurs][indiceI2Extend:créée par l'intellectuel peuple bête]",
+"[indiceQ2:raffiné][indiceI2:sublime][indiceQ2Extend:votre beauté aussi grande soit elle ne saurait égaler celle de mon précieux objet][indiceI2Extend: la qualité et les décorations de cette #item# sont magnifiques]",
+"[indiceQ2:ouvrage][indiceI2:oeuvre d'art][indiceQ2Extend:je l'avais créer dans le but d'y exprimer toute ma détresse et mes sentiments a travers un ultime cri d'agonie. Cette objet est un ouvrage important de ma vie][indiceI2Extend:une #item# originale. On peut y comprendre une claire critique de la société à travers les différent choix de matériaux et ces formes abstraite gravé par ci et par là.]",
+"[indiceQ2:poème][indiceI2:woof-wouaf][indiceQ2Extend:j'y ai rédiger un poème destiné à ma moitié][indiceI2Extend:mais pourquoi y'a écrit que ouaf]"
+  ],
+
+  "itemDesc": [
+    "Une #item# #indiceI1Extend#, #indiceI2Extend#"
+  ]
+}

@@ -1,90 +1,101 @@
 {
 "origin": [
-"#setItem##queteStory#;#itemDesc#"
+"#setItem##setName#;#queteStory#;#itemDesc#"
 ],
-  "setItem": [
-    "#[item:épée]setIndice1Epee##setIndice2#",
-    "#[item:masse]setIndice1Masse##setIndice2#",
-    "#[item:lance]setIndice1Lance##setIndice2#",
-    "#[item:hache]setIndice1Hache##setIndice2#"
+"setName": [
+    "Griffe-Noire",
+    "Museau-Rouge",
+    "Crocs-de-Lune",
+    "Hurlevent",
+    "Sang-Épine",
+    "Œil-Obscur",
+    "Brise-Os"
   ],
+"setItem": [
+"#[item:epee]setIndice1Epee##setIndice2#",
+"#[item:masse]setIndice1Masse##setIndice2#",
+"#[item:lance]setIndice1Lance##setIndice2#"
+],
 "setIndice1Epee": [
-"#[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]#",
-"#[indiceQ1:abimé][indiceI1:fissurée][indiceQ1Extend:vieux, abimé, cassé][indiceI1Extend:ayant bien servit, elle est couverte de fissure]#",
-"#[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]#",
+"#[indiceQ1:tranchant][indiceI1:aiguisée][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisée]#",
+"#[indiceQ1:abimé][indiceI1:fissurée][indiceQ1Extend:vieux, abimé, cassé][indiceI1Extend:ayant tellement servi qu'elle est couverte de fissure]#",
+"#[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutôt bien décorée et assurément précieuse]#",
 "#[indiceQ1:tordue][indiceI1:courbe][indiceQ1Extend:tordu, d'ailleur j'ai jamais compris qui l'avais plié comme ca][indiceI1Extend: courbe]#"
 ],
 "setIndice1Masse": [
 "#[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]#",
-"#[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]#",
-"#[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]#",
+"#[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutôt bien décorée et assurément précieuse]#",
+"#[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:particulièrement grand][indiceI1Extend:au manche allongé]#",
 "#[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]#"
 ],
 "setIndice1Lance": [
 "#[indiceQ1:pointu][indiceI1:perforante][indiceQ1Extend:pointu][indiceI1Extend:à la tête perforante]#",
-"#[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]#",
+"#[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:particulièrement grand][indiceI1Extend:au manche allongé]#",
 "#[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]#",
-"#[indiceQ1:invisible][indiceI1:flou][indiceQ1Extend:presque invisible][indiceI1Extend:... flou ? il est difficile a décrire]#"
+"#[indiceQ1:invisible][indiceI1:flou][indiceQ1Extend:presque invisible][indiceI1Extend:imperceptible]#"
 ],
 "setIndice1Hache": [
-"#[indiceQ1:menacant][indiceI1:dangereux][indiceQ1Extend:inquiétant][indiceI1Extend:maudite, imprégné d'un aura meurtrière]#",
-"#[indiceQ1:instable][indiceI1:vibrante][indiceQ1Extend:, on aurait dit qu'il serais capable d'exploser a totu moment][indiceI1Extend:qui vibre constament, probablement instable]#",
-"#[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]#",
-"#[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]#"
+"#[indiceQ1:menacant][indiceI1:dangereuse][indiceQ1Extend:inquiétant][indiceI1Extend:maudite et imprégnée d'une aura meurtrière]#",
+"#[indiceQ1:instable][indiceI1:vibrante][indiceQ1Extend:on aurait dit qu'il serait capable d'exploser à tout moment][indiceI1Extend:qui vibre constamment 🫦 et est probablement instable]#",
+"#[indiceQ1:tranchant][indiceI1:aiguisée][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisée]#"
 ],
 "setIndice2": [
-"#[indiceQ2:héritage][indiceI2:manufacture humaine][indiceQ2Extend:de famille][indiceI2Extend:créé par des piteux humains]#",
-"#[indiceQ2:époque sombre][indiceI2:grande révolution humaine][indiceQ2Extend:représentant les pires heures humaines][indiceI2Extend:datant de la première guerre civile humaine]#",
-"#[indiceQ2:sainte][indiceI2:béni][indiceQ2Extend:divin][indiceI2Extend:couverte d'eau divine]#",
-"#[indiceQ2:banale][indiceI2:commune][indiceQ2Extend:comme les autres][indiceI2Extend:sans petit truc en plus]#"
+"#[indiceQ2:héritage][indiceI2:manufacture bestiale][indiceQ2Extend:un pécieux héritage de mes géniteurs][indiceI2Extend:créée par l'intellectuel peuple bête]#",
+"#[indiceQ2:raffiné][indiceI2:sublime][indiceQ2Extend:votre beauté aussi grande soit elle ne saurait égaler celle de mon précieux objet][indiceI2Extend:la qualité et les décorations de cette #item# sont magnifiques]#",
+"#[indiceQ2:ouvrage][indiceI2:oeuvre d'art][indiceQ2Extend:je l'avais créer dans le but d'y exprimer toute ma détresse et mes sentiments a travers un ultime cri d'agonie. Cette objet est un ouvrage important de ma vie][indiceI2Extend:une #item# originale. On peut y comprendre une claire critique de la société à travers les différent choix de matériaux et ces formes abstraite gravé par ci et par là.]#",
+"#[indiceQ2:poème][indiceI2:woof-wouaf][indiceQ2Extend:j'y ai rédiger un poème destiné à ma moitié][indiceI2Extend:mais pourquoi y'a écrit que ouaf]#"
 ],
 "queteStory": [
-"#greeting.capitalize# #compliment# #joueur#, #intro# #problème# #indiceQ1Extend#, #indiceQ2Extend#. #question.capitalize# #solution# ? #politesse.capitalize#."
+"Waf (#greeting.capitalize# #compliment# #joueur#, #intro# #problème#. #question.capitalize# #solution# #politesse# ?)"
 ],
 "greeting": [
-"bonjour",
-"hoy",
-"..."
+"ouaf",
+"woof",
+"woaf",
+"hum... wuf...",
+"rrrRRRRRrrrr 🫦"
 ],
 "compliment": [
-"douce",
-"affreuse",
-"madame la",
-"..."
+"belle",
+"charmante",
+"consoeur",
+"belle",
+"ma chère"
 ],
 "joueur": [
-"sorcière",
-"mage"
+"demoiselle",
+"mage de talent incomparrable",
+"dame toute puissante"
 ],
 "intro": [
-"j'ai merdé",
-"je viens a vous",
-""
+"pendant une inopinée décision de découvrir les joie de la peinture",
+"alors que j'étais submergé d'allégresse et de joie lors d'un délicieux repas entre confrère artiste",
+"lors d'une retraite psychologique dans les terres eloignées de Beastland©️",
+"dès lors que j'ai quitté ma noble demeure",
+"à la sortie de mon doux foyer"
 ],
 "problème": [
-"j'ai égaré un objet",
-"j'ai perdu un objet",
-"je crois bien avoir perdu un objet m'appartenant",
-"un de vos congénère m'as lancer un sort et impossible de retrouver un objet"
-
+"j'eusse égaré mon objet",
+"j'égarasse mon bien",
+"je me suis fait dérober mon bien"
 ],
 "question": [
-"impossible de me souvenir ce que c'était ni où je l'ai laisser. Pouvez-vous m'aider",
-"j'arrive plus a me rappeler ce que c'est. Aidez moi",
-"j'ai entendu dire que malgré les trou de mémoires vous pouviez m'aider"
+"auriez-vous l'amabilité de m'aider",
+"dans votre infinie mansuétude, daignerez-vous m'apporter votre aide",
+"o sage dame, pourriez-vous m'accorder la gentillesse d'apporter votre soutient"
 ],
 "solution": [
-"à retrouver mon objet",
-"à retrouver la mémoire",
-"je ne sais plus quoi faire",
-"..."
+"et de me rapporter par la même occasion mon objet perdu ?",
+"et de combler ce trou dans mon coeur qui me ronge de désespoir ?",
+"et répondre à ma détresse ?"
 ],
 "politesse": [
-"je vous en serais reconnaissant",
-"je vous paierai",
-"sinon je vous tue",
-"voici le lien vers l'asset liste pour vous aider a générer le donjon : https://kenney.nl/assets/micro-roguelike"
-],"itemDesc": [
-"Une #item# #indiceI1Extend#, #indiceI2Extend#"
-]
+"je vous en serais des plus reconnaissants",
+"vous vous en verrez remerciée mille fois",
+"je saurais vous repayer grandement"
+],
+
+  "itemDesc": [
+    "Une #item# #indiceI1Extend#, #indiceI2Extend#"
+  ]
 }

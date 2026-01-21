@@ -1,44 +1,56 @@
 {
 "origin": [
-"#setItem# La quete : #queteStory#; L'item : #itemDesc#"
+"#setItem##setName#;#queteStory#;#itemDesc#"
 ],
+"setName": [
+    "Theren Naïlo",
+    "Hadarai Mystralath",
+    "Felarion Glynkass",
+    "Quarion Nathandem",
+    "Hadarai Holimion",
+    "Elaris Moonwhisper",
+    "Sylvarion Lethariel",
+    "Aerendyl Faelion",
+    "Ithilion Starbloom",
+    "Naerion Silversong"
+  ],
 "setItem": [
-"[item:hache]#setIndice1Hache##setIndice2#",
-"[item:masse]#setIndice1Masse##setIndice2#",
-"[item:lance]#setIndice1Lance##setIndice2#"
+"#[item:hache]setIndice1Hache##setIndice2#",
+"#[item:masse]setIndice1Masse##setIndice2#",
+"#[item:lance]setIndice1Lance##setIndice2#"
 ],
 "setIndice1Epee": [
-"[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]",
-"[indiceQ1:abimé][indiceI1:fissurée][indiceQ1Extend:vieux, abimé, cassé][indiceI1Extend:ayant bien servit, elle est couverte de fissure]",
-"[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]",
-"[indiceQ1:tordue][indiceI1:courbe][indiceQ1Extend:tordu, d'ailleur j'ai jamais compris qui l'avais plié comme ca][indiceI1Extend: courbe]"
+"#[indiceQ1:tranchant][indiceI1:aiguisée][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisée]#",
+"#[indiceQ1:abimé][indiceI1:fissurée][indiceQ1Extend:vieux, abimé, cassé][indiceI1Extend:ayant tellement servi qu'elle est couverte de fissure]#",
+"#[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutôt bien décorée et assurément précieuse]#",
+"#[indiceQ1:tordue][indiceI1:courbe][indiceQ1Extend:tordu, d'ailleur j'ai jamais compris qui l'avais plié comme ca][indiceI1Extend: courbe]#"
 ],
 "setIndice1Masse": [
-"[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
-"[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutot bien décorée et assurément précieuse]",
-"[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]",
-"[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]"
+"#[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]#",
+"#[indiceQ1:précieux][indiceI1:décorée][indiceQ1Extend:décoratif inestimable][indiceI1Extend:plutôt bien décorée et assurément précieuse]#",
+"#[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:particulièrement grand][indiceI1Extend:au manche allongé]#",
+"#[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]#"
 ],
 "setIndice1Lance": [
-"[indiceQ1:pointu][indiceI1:perforante][indiceQ1Extend:pointu][indiceI1Extend:à la tête perforante]",
-"[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:grand][indiceI1Extend:au manche allongé]",
-"[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]",
-"[indiceQ1:invisible][indiceI1:flou][indiceQ1Extend:presque invisible][indiceI1Extend:... flou ? il est difficile a décrire]"
+"#[indiceQ1:pointu][indiceI1:perforante][indiceQ1Extend:pointu][indiceI1Extend:à la tête perforante]#",
+"#[indiceQ1:grand][indiceI1:longue][indiceQ1Extend:particulièrement grand][indiceI1Extend:au manche allongé]#",
+"#[indiceQ1:magique][indiceI1:étrange][indiceQ1Extend:enchanté][indiceI1Extend:dont émane une magie étrange]#",
+"#[indiceQ1:invisible][indiceI1:flou][indiceQ1Extend:presque invisible][indiceI1Extend:imperceptible]#"
 ],
 "setIndice1Hache": [
-"[indiceQ1:menacant][indiceI1:dangereux][indiceQ1Extend:inquiétant][indiceI1Extend:maudite, imprégné d'un aura meurtrière]",
-"[indiceQ1:instable][indiceI1:vibrante][indiceQ1Extend:, on aurait dit qu'il serais capable d'exploser a totu moment][indiceI1Extend:qui vibre constament, probablement instable]",
-"[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]",
-"[indiceQ1:tranchante][indiceI1:aiguisé][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisé]"
+"#[indiceQ1:menacant][indiceI1:dangereuse][indiceQ1Extend:inquiétant][indiceI1Extend:maudite et imprégnée d'une aura meurtrière]#",
+"#[indiceQ1:instable][indiceI1:vibrante][indiceQ1Extend:on aurait dit qu'il serait capable d'exploser à tout moment][indiceI1Extend:qui vibre constamment 🫦 et est probablement instable]#",
+"#[indiceQ1:lourd][indiceI1:lourde][indiceQ1Extend:particulièrement lourd][indiceI1Extend:lourde]#",
+"#[indiceQ1:tranchant][indiceI1:aiguisée][indiceQ1Extend:qui coupe][indiceI1Extend:bien aiguisée]#"
 ],
 "setIndice2": [
-"[indiceQ2:héritage][indiceI2:manufacture elfe][indiceQ2Extend:léger par mes vénéreux ancêtres. Une grande ligné d'elfe fidèle à notre guide][indiceI2Extend:créer par des horribles elfes]",
-"[indiceQ2:anti homme-arbre][indiceI2:enflammer][indiceQ2Extend:pratique pour éradiquer nos ennemis homme-arbre qui refusent le progrès vers lequel notre grand guide nous amène][indiceI2Extend:capable d'enflammer ses victimes]",
-"[indiceQ2:sophistiqué][indiceI2:futuristique][indiceQ2Extend:résultat des années d'études et de progrès de notre grande nation supèrieure][indiceI2Extend:elle semble tout droit sortie du futur]",
-"[indiceQ2:effigie du guide][indiceI2:Portrait gravure][indiceQ2Extend:j'avais pris le soins d'ajouter une gravure à l'éffigie de notre magnifique guide touristique][indiceI2Extend:un portrait est gravé sur une extrémité]"
+"#[indiceQ2:héritage][indiceI2:manufacture elfe][indiceQ2Extend:léguer par mes vénérables ancêtres][indiceI2Extend:créée par d'horribles elfes]#",
+"#[indiceQ2:anti homme-arbre][indiceI2:enflammer][indiceQ2Extend:pratique pour éradiquer nos ennemis hommes arbres qui refusent le progrès vers lequel notre grand guide nous amène][indiceI2Extend:capable d'enflammer ses victimes]#",
+"#[indiceQ2:sophistiqué][indiceI2:futuristique][indiceQ2Extend:résultat d'années d'études et de progrès de notre grande nation supérieure][indiceI2Extend:elle semble tout droit sortie du futur]#",
+"#[indiceQ2:effigie du guide][indiceI2:Portrait gravure][indiceQ2Extend:j'avais pris le soin d'ajouter une gravure à l'effigie de notre magnifique guide touristique][indiceI2Extend:un portrait est gravé sur une extrémité]#"
 ],
 "queteStory": [
-"#greeting.capitalize# #compliment# #joueur#, #intro# #problème# #indiceQ1Extend#, #indiceQ2Extend#. #question.capitalize# #solution# #politesse# ?"
+"#greeting.capitalize# #compliment# #joueur#, #intro# #problème# #indiceQ1Extend#, #indiceQ2Extend#. #question.capitalize# #solution# ? #politesse.capitalize#."
 ],
 "greeting": [
 "salutation",
@@ -55,18 +67,18 @@
 ],
 "intro": [
 "voyez-vous, dans une bataille contre les homme arbres, j'ai pris un méchant coup sur la tête qui",
-"alors que je développais une nouvelle technologie du futur capable de nous aider dans nos conquêtes, ma concentration absolu",
-"mon manque de foie envers le grand guide"
+"alors que je développais une nouvelle technologie du futur capable de nous aider dans nos conquêtes, ma concentration absolue",
+"mon manque de foi envers le grand guide"
 ],
 "problème": [
 "m'a provoqué un méchant trou de mémoire, je ne retrouve plus mon objet",
-"m'a fait oublier l'existance d'un objet",
+"m'a fait oublier l'existence d'un objet",
 "m'a tellement distrait qu'il m'est impossible de me souvenir d'un objet en particulier, il était"
 ],
 "question": [
-"pour l'amour du guide, pouvez-vous m'aidez",
-"j'arrive plus a me rappeler ce que c'est. Aidez moi",
-"pouvez-vous usé de vos mystérieux pouvoirs afin de m'aider"
+"pour l'amour du guide, pouvez-vous m'aider",
+"je n'arrive plus à me rappeler ce que c'est. Aidez moi",
+"pouvez-vous user de vos mystérieux pouvoirs afin de m'aider"
 ],
 "solution": [
 "à récupérer mon objet",
@@ -74,10 +86,9 @@
 ],
 "politesse": [
 "je vous paierai",
-"que le guide dirige vos pas",
-""
+"que le guide dirige vos pas"
 ],
 "itemDesc": [
-"Une #item# #indiceI1Extend#, #indiceI2Extend#"
+"Une #item# #indiceI1Extend#. #indiceI2Extend.capitalize#"
 ]
 }

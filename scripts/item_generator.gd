@@ -13,14 +13,15 @@ func GenerateItemBatch(bannedItem: ItemData) -> ItemData:
 	grammar.rng = rng
 	grammar.add_modifiers(Tracery.UniversalModifiers.get_modifiers())
 		
-	print(grammar.flatten("#origin#"))
+	grammar.flatten("#origin#")
 	
 	var item : ItemData = null
 	
 	while item == null or ItemData.is_the_same(item, bannedItem):
-		item = ItemData.new(grammar._save_data["item"], grammar._save_data["indiceQ1"]
-		, grammar._save_data["indiceQ2"])
-			
+		item = ItemData.new(grammar._save_data["item"], grammar._save_data["indiceI1"]
+		, grammar._save_data["indiceI2"])
+	
+	print("add::::::::::" + item.type + " " + item.indice1 + " " + item.indice2)
 	return item
 	
 	
@@ -32,9 +33,12 @@ func DispatchItems(questItem : ItemData) -> void:
 	for i in range(0, nbRoomToSpawnItems):
 		var roomIndex : int = randi_range(0, rooms.size() - 1)
 		var itemArray : Array[Node] = (rooms[roomIndex].get_tree().get_nodes_in_group("Items"))
-		var selectedItemSlot : ItemCollectible = itemArray[randi_range(0, itemArray.size() - 1)]
+		var indexItem = randi_range(0, itemArray.size() - 1)
+		var selectedItemSlot : ItemCollectible = itemArray[indexItem]
+		itemArray.remove_at(indexItem)
 		if i == 0:
 			selectedItemSlot.setup(questItem)
+			print("add::::::::::" + questItem.type + " " + questItem.indice1 + " " + questItem.indice2)
 		else:
 			selectedItemSlot.setup(GenerateItemBatch(questItem))
 	

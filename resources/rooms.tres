@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bbqi8weov0twl" path="res://scripts/room_data.gd" id="1_y6qqy"]
 [ext_resource type="PackedScene" uid="uid://dh5b6jjc2fqyt" path="res://scenes/rooms/Graveyard/C-01.tscn" id="2_0gjvv"]
-[ext_resource type="Script" uid="uid://b3pvvx65rfh5g" path="res://scripts/all_rooms_data.gd" id="2_jse7f"]
+[ext_resource type="Script" path="res://scripts/all_rooms_data.gd" id="2_jse7f"]
 [ext_resource type="PackedScene" uid="uid://dbcj3bhu375j0" path="res://scenes/rooms/Graveyard/C-02.tscn" id="3_6464e"]
 [ext_resource type="PackedScene" uid="uid://dy3upe1iv7mbj" path="res://scenes/rooms/Graveyard/C-03.tscn" id="3_huub4"]
 [ext_resource type="PackedScene" uid="uid://c3jv3tewyna7e" path="res://scenes/rooms/Graveyard/C-04.tscn" id="4_5gs8x"]

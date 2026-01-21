@@ -32,4 +32,4 @@ room_data = ExtResource("2_rt2n2")
 position = Vector2(441, 919)
 
 [node name="ItemGenerator" parent="." instance=ExtResource("7_18nlu")]
-percentageOfRoomsWithItem = 1.0
+percentageOfRoomsWithItem = 0.4

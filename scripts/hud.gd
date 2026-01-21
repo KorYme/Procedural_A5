@@ -8,6 +8,15 @@ var previous_life : int
 
 @onready var life_container : BoxContainer = $"LifeContainer"
 
+#Quest info
+@export var clue1 : Label
+@export var clue2 : Label
+
+#Current item
+@export var currentItemSprite : Sprite2D
+@export var currentItemClue1 : Label
+@export var currentItemClue2 : Label
+
 #Item desc
 @export var itemFoundSprite : Sprite2D
 @export var itemFoundDesc : Label
@@ -44,14 +53,19 @@ func _remove_heart() -> void:
 	
 func on_collect_data(data: ItemData) -> void:
 	
-	for i in UiDescItems:
-		i.visible = true
+	toggleDialogueBox(true)
 		
 	itemFoundSprite.texture = data.sprite
 	itemFoundDesc.text = data.type + " " + data.indice1 + " " + data.indice2
 	
-	await get_tree().create_timer(4.0).timeout
-	for i in UiDescItems:
-		i.visible = false
+	currentItemSprite.texture = data.sprite
+	currentItemClue1.text = data.indice1
+	currentItemClue2.text = data.indice2
+	
+
 		
 	pass
+	
+func toggleDialogueBox(value : bool) -> void:
+	for i in UiDescItems:
+		i.visible = value
